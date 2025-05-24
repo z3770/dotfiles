@@ -38,7 +38,7 @@ default-root-container-orientation = 'auto'
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
 # Fallback value (if you omit the key): on-focused-monitor-changed = []
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+# on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
 # You can effectively turn off macOS 'Hide application' (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
@@ -58,18 +58,13 @@ automatically-unhide-macos-hidden-apps = false
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See:
 #                 https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
-[gaps]
-    inner.horizontal = 10
-    inner.vertical =   10
-    outer.left =       5
-    outer.bottom =     5
-    outer.top =        5
-    outer.right =      5
-
-# 'main' binding mode declaration
-# See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
-# 'main' binding mode must be always presented
-# Fallback value (if you omit the key): mode.main.binding = {}
+[gaps] #bordless
+   inner.horizontal = 0
+   inner.vertical =   0
+   outer.left =       0
+   outer.bottom =     0
+   outer.top =        0
+   outer.right =      0
 [mode.main.binding]
 
     # All possible keys:
@@ -149,8 +144,8 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-tab = 'move-node-to-monitor --wrap-around next --focus-follows-window'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
-    alt-shift-semicolon = 'mode service'
-    alt-shift-a = 'mode apps'
+    alt-shift-rightSquareBracket = 'mode service'
+    alt-shift-leftSquareBracket = 'mode apps'
 
 
 # 'service' binding mode declaration.
@@ -160,7 +155,7 @@ automatically-unhide-macos-hidden-apps = false
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
     f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
     backspace = ['close-all-windows-but-current', 'mode main']
-
+    b = ['exec-and-forget /Users/a-/.config/aerospace/gaps_switcher.lua', 'reload-config', 'mode main']
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
     #s = ['layout sticky tiling', 'mode main']
 
@@ -173,3 +168,4 @@ automatically-unhide-macos-hidden-apps = false
     esc = 'mode main'
     t = 'exec-and-forget open -a /Applications/Telegram.app'
     b = 'exec-and-forget open -a /Applications/Zen.app'
+    

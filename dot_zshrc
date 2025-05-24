@@ -24,11 +24,11 @@ export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
 
 alias ls="eza --icons=always"
 alias tree="eza --tree --icons --git"
-
 alias vim=nvim
 alias lg="lazygit"
 alias cd="z"
 alias cdi="zi"
+alias cat="bat"
 alias dotfiles="chezmoi"
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
