@@ -18,13 +18,7 @@ require("lazy").setup({
   -- UI,UX
   { "nvim-lualine/lualine.nvim", lazy = false },
   { "nvim-tree/nvim-web-devicons" },
-  -- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   {
     "rcarriga/nvim-notify",
     lazy = false,

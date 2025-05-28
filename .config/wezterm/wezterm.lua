@@ -3,23 +3,23 @@ wezterm.log_info("The config was reloaded!")
 
 local config = {
 	-- webgpu_power_preference = "LowPower",
-	color_scheme = "Tokyo Night",
+	color_scheme = "Catppuccin Mocha",
 	set_environment_variables = {
 		TERM = "xterm-256color",
 	},
 
 	font = wezterm.font_with_fallback({ "JetBrainsMono Nerd Font", "SF Pro" }),
 	font_size = 18,
-	window_background_opacity = 1,
-	macos_window_background_blur = 0,
+	window_background_opacity = 0.6,
+	macos_window_background_blur = 60,
 	window_decorations = "RESIZE",
 
 	initial_cols = 80,
 	initial_rows = 40,
 	window_padding = {
-		left = 5,
+		left = 10,
 		right = 0,
-		top = 5,
+		top = 10,
 		bottom = 0,
 	},
 

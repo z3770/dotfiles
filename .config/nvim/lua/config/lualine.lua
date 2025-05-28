@@ -13,7 +13,7 @@ end
 
 require("lualine").setup({
   options = {
-    theme = "auto",
+    theme = "catppuccin",
     section_separators = "",
     component_separators = "",
     icons_enabled = true,
