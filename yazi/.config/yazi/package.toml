@@ -1,0 +1,9 @@
+[[plugin.deps]]
+use = "uhs-robert/sshfs"
+rev = "5edff3b"
+hash = "e92138f6eb884bef96d92b2d114ac927"
+
+[[flavor.deps]]
+use = "BennyOe/tokyo-night"
+rev = "8e6296f"
+hash = "d9da921c3bd37ba32ee27a8a7a40461f"
