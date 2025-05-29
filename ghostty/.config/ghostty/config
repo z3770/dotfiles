@@ -1,0 +1,7 @@
+theme = "tokyonight-storm"
+font-size = 18
+background-opacity = 1
+background-blur = 0
+#macos-titlebar-style = hidden
+shell-integration-features = no-cursor
+cursor-style-blink = true
