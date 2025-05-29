@@ -1,0 +1,11 @@
+theme = "tokyonight"
+#background = "#000000"
+font-size = 18
+mouse-hide-while-typing = true
+macos-titlebar-style = hidden
+window-padding-x = 24
+window-padding-y = 12
+cursor-style = block
+shell-integration-features = no-cursor, ssh-env
+macos-option-as-alt = left
+quit-after-last-window-closed = true
