@@ -1,0 +1,9 @@
+[[plugin.deps]]
+use = "uhs-robert/sshfs"
+rev = "5edff3b"
+hash = "e92138f6eb884bef96d92b2d114ac927"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "4a1802a"
+hash = "b951d27afe197d154f6da9683b46c5f8"

@@ -1,0 +1,12 @@
+theme = "catppuccin mocha"
+#background = "#000000"
+font-size = 22
+mouse-hide-while-typing = true
+window-decoration = true
+window-padding-x = 24
+window-padding-y = 24
+cursor-style = block
+shell-integration-features = no-cursor, ssh-env
+macos-option-as-alt = left
+quit-after-last-window-closed = true
+
