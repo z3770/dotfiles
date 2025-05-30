@@ -1,6 +1,6 @@
 -- Init configs
 -- Dev plugs
-require("config.cmp")
+require("config.completions")
 require("config.formatter")
 require("config.linter")
 require("config.lsp")

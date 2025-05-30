@@ -1,5 +1,7 @@
 local cmp = require("cmp")
 local lspkind = require("lspkind")
+local luasnip = require("luasnip")
+require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup({
   window = {
@@ -19,8 +21,15 @@ cmp.setup({
     ["<Tab>"] = cmp.mapping.select_next_item(),
     ["<S-Tab>"] = cmp.mapping.select_prev_item(),
   }),
+
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
+    { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
   }),

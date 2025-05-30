@@ -7,7 +7,7 @@ require("noice").setup({
     },
   },
   presets = {
-    bottom_search = true, -- Use a classic bottom cmdline for search
+    bottom_search = false, -- Use a classic bottom cmdline for search
     command_palette = false, -- Position the cmdline and popupmenu together
     long_message_to_split = true, -- Long messages will be sent to a split
     inc_rename = false, -- Enables an input dialog for inc-rename.nvim
