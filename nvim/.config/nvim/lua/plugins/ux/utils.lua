@@ -56,13 +56,6 @@ return {
   { "tpope/vim-surround" },
   { "tpope/vim-commentary" },
   {
-    "folke/zen-mode.nvim",
-    cmd = { "ZenMode" },
-    keys = {
-      { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" },
-    },
-  },
-  {
     "mrjones2014/smart-splits.nvim",
     lazy = false,
     keys = {
