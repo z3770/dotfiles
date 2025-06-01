@@ -19,8 +19,6 @@ map(
   { desc = "Code Action" }
 )
 
-map("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "Open lazy git" })
-
 -- UTILS
 
 map(

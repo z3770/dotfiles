@@ -30,7 +30,7 @@ return {
     opts = {
       spec = {
         { "<leader>c", group = "LSP/Code" },
-        { "<leader>f", group = "Telescope" },
+        { "<leader>f", group = "Fzf" },
         { "<leader>h", group = "Harpoon" },
         { "<leader>n", group = "Noice" },
         { "<leader>u", group = "UI" },
@@ -109,27 +109,6 @@ return {
         "<C-l>",
         "<cmd>SmartCursorMoveRight<cr>",
         desc = "Smart Splits: Move right",
-      },
-      -- Swap splits
-      {
-        "<leader><leader>h",
-        "<cmd>SmartSwapLeft<cr>",
-        desc = "Smart Splits: Swap left",
-      },
-      {
-        "<leader><leader>j",
-        "<cmd>SmartSwapDown<cr>",
-        desc = "Smart Splits: Swap down",
-      },
-      {
-        "<leader><leader>k",
-        "<cmd>SmartSwapUp<cr>",
-        desc = "Smart Splits: Swap up",
-      },
-      {
-        "<leader><leader>l",
-        "<cmd>SmartSwapLeft<cr>",
-        desc = "Smart Splits: Swap left",
       },
     },
   },
