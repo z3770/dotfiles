@@ -48,14 +48,6 @@ return {
     },
   },
   {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    opts = {},
-    config = function()
-      require("ibl").setup({})
-    end,
-  },
-  {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     config = true,
@@ -63,7 +55,13 @@ return {
   { "tpope/vim-fugitive" },
   { "tpope/vim-surround" },
   { "tpope/vim-commentary" },
-  { "folke/zen-mode.nvim", cmd = { "ZenMode" } },
+  {
+    "folke/zen-mode.nvim",
+    cmd = { "ZenMode" },
+    keys = {
+      { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" },
+    },
+  },
   {
     "mrjones2014/smart-splits.nvim",
     lazy = false,

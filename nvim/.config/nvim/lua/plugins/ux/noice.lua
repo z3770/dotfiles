@@ -1,17 +1,17 @@
 return {
-  {
-    "rcarriga/nvim-notify",
-    lazy = false,
-    config = function()
-      vim.notify = require("notify")
-    end,
-  },
+  -- {
+  --   "rcarriga/nvim-notify",
+  --   lazy = false,
+  --   config = function()
+  --     vim.notify = require("notify")
+  --   end,
+  -- },
   {
     "folke/noice.nvim",
     event = "VeryLazy",
     dependencies = {
       "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
+      -- "rcarriga/nvim-notify",
     },
     config = function()
       require("noice").setup({
