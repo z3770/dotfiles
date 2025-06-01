@@ -3,7 +3,13 @@ return {
     "stevearc/oil.nvim",
     ---@module 'oil'
     ---@type oil.SetupOpts
-    opts = {},
+    opts = {
+      columns = {
+        -- "permissions",
+        -- "size",
+        "icon",
+      },
+    },
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
     lazy = false,
     keys = { { "<C-n>", "<cmd>Oil<cr>", desc = "Open Oil" } },
@@ -27,7 +33,7 @@ return {
         { "<leader>f", group = "Telescope" },
         { "<leader>h", group = "Harpoon" },
         { "<leader>n", group = "Noice" },
-        { "<leader>v", group = "Visuals" },
+        { "<leader>u", group = "UI" },
         { "<leader>x", group = "Trouble" },
       },
     },

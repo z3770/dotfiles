@@ -1,4 +1,0 @@
-1. Check if some plugins didnt migrate [V]
-2. Check carefully lsp and formatter. Especially format on save
-3. Set keymappings as it was before []
-4. Check if legendary has his own benefits over which key

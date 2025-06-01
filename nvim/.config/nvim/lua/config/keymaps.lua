@@ -22,12 +22,6 @@ map(
 map("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "Open lazy git" })
 
 -- UTILS
-map(
-  "n",
-  "<leader>q",
-  ":bd<CR>",
-  { noremap = true, silent = true, desc = "Close buffer" }
-)
 
 map(
   "n",
@@ -41,12 +35,6 @@ map(
   ":bprevious<CR>",
   { noremap = true, silent = true, desc = "Prev buff" }
 )
-
--- Cursor movement in Insert
-map("i", "<C-h>", "<Left>", { noremap = true, silent = true })
-map("i", "<C-l>", "<Right>", { noremap = true, silent = true })
-map("i", "<C-j>", "<Down>", { noremap = true, silent = true })
-map("i", "<C-k>", "<Up>", { noremap = true, silent = true })
 
 map("n", "<C-u>", "<C-u>zz")
 map("n", "<C-d>", "<C-d>zz")

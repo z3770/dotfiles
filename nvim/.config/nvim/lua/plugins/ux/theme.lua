@@ -65,7 +65,7 @@ return {
     lazy = false,
     keys = {
       {
-        "<leader>vt",
+        "<leader>ut",
         "<cmd>TransparentToggle<cr>",
         desc = "Toggle background transparency",
       },
