@@ -32,7 +32,5 @@ alias cat="bat"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-eval "$(alias sketchybar="$HOME/.config/sketchybar/set-bar-mode.sh")"
-eval "$(alias sketchybar="$HOME/.config/sketchybar/set-bar-mode.sh")"
 
 export PATH=$PATH:/Users/a-/.spicetify
