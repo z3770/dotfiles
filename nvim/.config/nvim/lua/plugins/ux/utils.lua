@@ -29,12 +29,15 @@ return {
     event = "VeryLazy",
     opts = {
       spec = {
-        { "<leader>c", group = "LSP/Code" },
-        { "<leader>f", group = "Fzf" },
-        { "<leader>h", group = "Harpoon" },
-        { "<leader>n", group = "Noice" },
+        { "gr", group = "LSP/Code" },
+        { "grr", desc = "References" },
+        { "grn", desc = "Rename" },
+        { "gri", desc = "Implementation" },
+        { "gra", desc = "Code actions" },
+        { "<leader>d", group = "Debug", icon = "󰃤" },
+        { "<leader>f", group = "Fzf", icon = "󱡠" },
+        { "<leader>h", group = "Harpoon", icon = "󱡀" },
         { "<leader>u", group = "UI" },
-        { "<leader>x", group = "Trouble" },
       },
     },
     keys = {

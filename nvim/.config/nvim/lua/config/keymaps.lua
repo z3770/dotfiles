@@ -1,11 +1,7 @@
 local map = vim.keymap.set
 
--- map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
--- map("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
--- map("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
--- map("n", "gr", vim.lsp.buf.references, { desc = "Show references" })
-
--- UTILS
+map("n", "grd", vim.lsp.buf.definition, { desc = "Definition" })
+map("n", "grD", vim.lsp.buf.declaration, { desc = "Declaration" })
 
 map(
   "n",
@@ -13,6 +9,7 @@ map(
   ":bnext<CR>",
   { noremap = true, silent = true, desc = "Next buff" }
 )
+
 map(
   "n",
   "<S-Tab>",
