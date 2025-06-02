@@ -63,7 +63,7 @@ automatically-unhide-macos-hidden-apps = false
     inner.vertical =   [{monitor.secondary = 0}, 10]
     outer.left =       [{monitor.secondary = 0},  0]
     outer.bottom =     [{monitor.secondary = 0},  0]
-    outer.top =        [{monitor.secondary = 0}, 30]
+    outer.top =        [{monitor.secondary = 0},  0]
     outer.right =      [{monitor.secondary = 0},  0]
 
 [mode.main.binding]
