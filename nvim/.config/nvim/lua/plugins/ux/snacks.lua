@@ -21,10 +21,10 @@ return {
     input = { enabled = true },
     notifier = { enabled = true },
     quickfile = { enabled = true },
+    scope = { enabled = true },
     scroll = { enabled = true },
     zen = {
       enabled = true,
-
       -- You can add any `Snacks.toggle` id here.
       -- Toggle state is restored when the window is closed.
       -- Toggle config options are NOT merged.
@@ -57,6 +57,11 @@ return {
           backdrop = false,
           width = 0, -- full width
         },
+      },
+    },
+    styles = {
+      zen = {
+        backdrop = { transparent = false },
       },
     },
   },

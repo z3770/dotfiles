@@ -1,23 +1,9 @@
 local map = vim.keymap.set
 
--- map(
---   { "i", "n" },
---   "<C-s>",
---   vim.lsp.buf.signature_help,
---   { desc = "LSP Signature Help" }
--- )
-
 -- map("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 -- map("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
 -- map("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
 -- map("n", "gr", vim.lsp.buf.references, { desc = "Show references" })
-
-map(
-  { "n", "v" },
-  "<leader>ca",
-  vim.lsp.buf.code_action,
-  { desc = "Code Action" }
-)
 
 -- UTILS
 
