@@ -34,3 +34,11 @@ vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter", "InsertLeave" }, {
     require("lint").try_lint()
   end,
 })
+
+-- Highlight on yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+  desc = "Highlight text when yanking",
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
