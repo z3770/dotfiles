@@ -1,5 +1,5 @@
 local function lsp_name()
-  local clients = vim.lsp.get_clients({ bufnr = 0 })
+  local clients = vim.lsp.get_clients { bufnr = 0 }
   if #clients > 0 then
     return "  " .. clients[1].name
   else
@@ -8,14 +8,14 @@ local function lsp_name()
 end
 
 local function clock()
-  return "🕒 " .. os.date("%H:%M")
+  return "🕒 " .. os.date "%H:%M"
 end
 
 return {
   "nvim-lualine/lualine.nvim",
   lazy = false,
   config = function()
-    require("lualine").setup({
+    require("lualine").setup {
       options = {
         theme = "tokyonight-night",
         section_separators = "",
@@ -55,6 +55,6 @@ return {
         lualine_y = {},
         lualine_z = {},
       },
-    })
+    }
   end,
 }

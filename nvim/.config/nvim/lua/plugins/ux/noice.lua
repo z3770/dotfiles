@@ -4,10 +4,9 @@ return {
     event = "VeryLazy",
     dependencies = {
       "MunifTanjim/nui.nvim",
-      -- "rcarriga/nvim-notify",
     },
     config = function()
-      require("noice").setup({
+      require("noice").setup {
         lsp = {
           override = {
             ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
@@ -21,7 +20,15 @@ return {
           inc_rename = true, -- Enables an input dialog for inc-rename.nvim
           lsp_doc_border = true, -- Add a border to hover docs and signature help
         },
-      })
+      }
     end,
+    keys = {
+      {
+        "<leader>lm",
+        "<cmd>Noice all<cr>",
+        mode = { "n", "v" },
+        desc = "Show messages",
+      },
+    },
   },
 }

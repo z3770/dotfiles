@@ -3,13 +3,15 @@ return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
-      require("nvim-treesitter.configs").setup({
+      require("nvim-treesitter.configs").setup {
         ensure_installed = {
           "lua",
           "python",
           "cpp",
           "bash",
           "json",
+          "go",
+          "xml",
           "yaml",
           "markdown",
           "vim",
@@ -37,14 +39,14 @@ return {
         autotag = {
           enable = false,
         },
-      })
+      }
     end,
   },
   {
     "nvim-treesitter/nvim-treesitter-context",
     event = "BufReadPost",
     config = function()
-      require("treesitter-context").setup({
+      require("treesitter-context").setup {
         enable = true,
         max_lines = 3,
         trim_scope = "outer",
@@ -53,7 +55,7 @@ return {
         mode = "cursor",
         separator = nil,
         zindex = 20,
-      })
+      }
     end,
   },
 }
