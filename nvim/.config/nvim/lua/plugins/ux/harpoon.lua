@@ -4,8 +4,8 @@ return {
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require("harpoon").setup({})
-      local harpoon = require("harpoon")
+      require("harpoon").setup {}
+      local harpoon = require "harpoon"
       local map = vim.keymap.set
       map("n", "<leader>ha", function()
         harpoon:list():add()
