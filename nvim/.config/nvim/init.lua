@@ -1,2 +1,2 @@
-require("config")     	 -- Core config
-require("lazy_setup")    -- Lazy
+require("config") -- Core config
+require("config.lazy_setup") -- Lazy

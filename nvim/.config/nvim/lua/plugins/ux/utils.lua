@@ -15,13 +15,13 @@ return {
     keys = { { "<C-n>", "<cmd>Oil<cr>", desc = "Open Oil" } },
   },
   {
-    "kdheepak/lazygit.nvim",
-    cmd = {
-      "LazyGit",
-      "LazyGitConfig",
-      "LazyGitCurrentFile",
-      "LazyGitFilter",
-      "LazyGitFilterCurrentFile",
+    "eandrju/cellular-automaton.nvim",
+    keys = {
+      {
+        "<leader>ll",
+        "<cmd>CellularAutomaton make_it_rain<cr>",
+        desc = "F*ck My Life",
+      },
     },
   },
   {
@@ -44,7 +44,7 @@ return {
       {
         "<leader>?",
         function()
-          require("which-key").show({ global = true })
+          require("which-key").show { global = true }
         end,
         desc = "Buffer Local Keymaps (which-key)",
       },
@@ -62,7 +62,6 @@ return {
     "mrjones2014/smart-splits.nvim",
     lazy = false,
     keys = {
-      -- Resizing splits
       {
         "<C-S-h>",
         "<cmd>SmartResizeLeft<cr>",
@@ -83,7 +82,6 @@ return {
         "<cmd>SmartResizeRight<cr>",
         desc = "Smart Splits: Resize Right",
       },
-      -- Move between splits
       {
         "<C-h>",
         "<cmd>SmartCursorMoveLeft<cr>",
