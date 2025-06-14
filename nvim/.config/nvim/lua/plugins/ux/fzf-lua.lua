@@ -9,8 +9,8 @@ return {
       builtin = {
         true,
         ["g?"] = "toggle-help",
-        ["<C-S-j>"] = "preview-down",
-        ["<C-S-k>"] = "preview-up",
+        ["<C-d>"] = "preview-down",
+        ["<C-u>"] = "preview-up",
       },
     },
   },

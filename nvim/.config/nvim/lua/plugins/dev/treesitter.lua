@@ -6,15 +6,14 @@ return {
       require("nvim-treesitter.configs").setup {
         ensure_installed = {
           "lua",
-          "python",
-          "cpp",
           "bash",
           "json",
-          "go",
+          "toml",
           "xml",
           "yaml",
           "markdown",
           "vim",
+          "vimdoc",
         },
         auto_install = true,
         highlight = {

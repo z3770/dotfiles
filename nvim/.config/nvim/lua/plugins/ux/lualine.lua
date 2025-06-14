@@ -8,7 +8,7 @@ local function lsp_name()
 end
 
 local function clock()
-  return "🕒 " .. os.date "%H:%M"
+  return "🕒 " .. os.date("%H:%M")
 end
 
 return {

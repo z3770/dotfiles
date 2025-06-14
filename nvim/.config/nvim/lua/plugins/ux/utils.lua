@@ -18,7 +18,7 @@ return {
     "eandrju/cellular-automaton.nvim",
     keys = {
       {
-        "<leader>ll",
+        "<leader><leader>l",
         "<cmd>CellularAutomaton make_it_rain<cr>",
         desc = "F*ck My Life",
       },
@@ -37,7 +37,7 @@ return {
         { "<leader>d", group = "Debug", icon = "󰃤" },
         { "<leader>f", group = "Fzf", icon = "󱡠" },
         { "<leader>h", group = "Harpoon", icon = "󱡀" },
-        { "<leader>l", group = "Other" },
+        { "<leader><leader>", group = "Other" },
         { "<leader>x", group = "Trouble", icon = "󰙅" },
         { "<leader>u", group = "Undotree", icon = "󰙅" },
         { "<leader>z", group = "Zen", icon = "Z" },

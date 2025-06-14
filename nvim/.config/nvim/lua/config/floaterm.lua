@@ -1,7 +1,7 @@
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 vim.keymap.set(
   "n",
-  "<leader>lt",
+  "<leader><leader>t",
   "<cmd>Floaterm<cr>",
   { desc = "Open floating terminal" }
 )

@@ -1,3 +1,17 @@
+vim.keymap.set(
+  "n",
+  "<leader><leader>X",
+  "<cmd>source %<cr>",
+  { desc = "Source %" }
+)
+vim.keymap.set("n", "<leader><leader>x", ":.lua<cr>", { desc = "Source row" })
+vim.keymap.set(
+  "v",
+  "<leader><leader>x",
+  ":lua<cr>",
+  { desc = "Source selected" }
+)
+
 vim.keymap.set("n", "grd", vim.lsp.buf.definition, { desc = "Definition" })
 vim.keymap.set("n", "grD", vim.lsp.buf.declaration, { desc = "Declaration" })
 

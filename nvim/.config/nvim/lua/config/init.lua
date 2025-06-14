@@ -1,3 +1,3 @@
-require "config.core"
-require "config.keymaps"
-require "config.floaterm"
+require("config.core")
+require("config.keymaps")
+require("config.floaterm")

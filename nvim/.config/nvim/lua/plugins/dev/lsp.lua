@@ -19,9 +19,11 @@ return {
     },
     config = function()
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup {}
+      local capabilities = require("blink.cmp").get_lsp_capabilities()
+      lspconfig.lua_ls.setup { capabilities = capabilities }
       lspconfig.pyright.setup {
         settings = {
+          capabilities = capabilities,
           pyright = {
             -- Using Ruff's import organizer
             disableOrganizeImports = true,
