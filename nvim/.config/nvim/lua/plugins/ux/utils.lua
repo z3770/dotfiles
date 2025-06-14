@@ -37,7 +37,10 @@ return {
         { "<leader>d", group = "Debug", icon = "󰃤" },
         { "<leader>f", group = "Fzf", icon = "󱡠" },
         { "<leader>h", group = "Harpoon", icon = "󱡀" },
-        { "<leader>u", group = "UI" },
+        { "<leader>l", group = "Other" },
+        { "<leader>x", group = "Trouble", icon = "󰙅" },
+        { "<leader>u", group = "Undotree", icon = "󰙅" },
+        { "<leader>z", group = "Zen", icon = "Z" },
       },
     },
     keys = {
