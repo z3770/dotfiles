@@ -1,12 +1,24 @@
 local set = vim.opt
 
-set.number = true
+set.nu = true
 set.relativenumber = true
-set.expandtab = true
+
 set.tabstop = 4
+set.softtabstop = 4
 set.shiftwidth = 4
+set.expandtab = true
+
 set.smartindent = true
-set.wrap = true
+set.wrap = false
+
+set.swapfile = false
+set.backup = false
+set.undodir = os.getenv "HOME" .. "/.vim/undodir"
+set.undofile = true
+
+set.scrolloff = 8
+set.signcolumn = "yes"
+
 set.termguicolors = true
 set.cursorline = false
 set.clipboard = "unnamedplus"

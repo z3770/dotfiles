@@ -9,6 +9,9 @@ return {
         -- "size",
         "icon",
       },
+      view_options = {
+        show_hidden = true,
+      },
     },
     dependencies = { { "echasnovski/mini.icons", opts = {} } },
     lazy = false,
@@ -18,7 +21,7 @@ return {
     "eandrju/cellular-automaton.nvim",
     keys = {
       {
-        "<leader>ll",
+        "<leader><leader>l",
         "<cmd>CellularAutomaton make_it_rain<cr>",
         desc = "F*ck My Life",
       },
@@ -37,7 +40,10 @@ return {
         { "<leader>d", group = "Debug", icon = "󰃤" },
         { "<leader>f", group = "Fzf", icon = "󱡠" },
         { "<leader>h", group = "Harpoon", icon = "󱡀" },
-        { "<leader>u", group = "UI" },
+        { "<leader><leader>", group = "Other" },
+        { "<leader>x", group = "Trouble", icon = "󰙅" },
+        { "<leader>u", group = "Undotree", icon = "󰙅" },
+        { "<leader>z", group = "Zen", icon = "Z" },
       },
     },
     keys = {
@@ -49,11 +55,6 @@ return {
         desc = "Buffer Local Keymaps (which-key)",
       },
     },
-  },
-  {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    config = true,
   },
   { "tpope/vim-fugitive" },
   { "tpope/vim-surround" },
