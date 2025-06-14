@@ -9,8 +9,11 @@ return {
         -- "size",
         "icon",
       },
+      view_options = {
+        show_hidden = true,
+      },
     },
-    dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     lazy = false,
     keys = { { "<C-n>", "<cmd>Oil<cr>", desc = "Open Oil" } },
   },
@@ -18,7 +21,7 @@ return {
     "eandrju/cellular-automaton.nvim",
     keys = {
       {
-        "<leader>ll",
+        "<leader><leader>l",
         "<cmd>CellularAutomaton make_it_rain<cr>",
         desc = "F*ck My Life",
       },
@@ -34,10 +37,14 @@ return {
         { "grn", desc = "Rename" },
         { "gri", desc = "Implementation" },
         { "gra", desc = "Code actions" },
-        { "<leader>d", group = "Debug", icon = "󰃤" },
-        { "<leader>f", group = "Fzf", icon = "󱡠" },
-        { "<leader>h", group = "Harpoon", icon = "󱡀" },
-        { "<leader>u", group = "UI" },
+        { "<leader>d", group = "Debug", icon = { icon = "󰃤", color = "azure" } },
+        { "<leader>f", group = "Fzf", icon = { icon = "󱡠", color = "blue" } },
+        { "<leader>h", group = "Harpoon", icon = { icon = "󱡀", color = "orange" } },
+        { "<leader>g", group = "Git", icon = { icon = "󰊢", color = "red" } },
+        { "<leader><leader>", group = "Other", icon = { icon = "~", color = "cyan" } },
+        { "<leader>x", group = "Trouble", icon = { icon = "󰙅", color = "green" } },
+        { "<leader>u", group = "Undotree", icon = { icon = "󰙅", color = "yellow" } },
+        { "<leader>z", group = "Zen", icon = { icon = "Z", color = "azure" } },
       },
     },
     keys = {
@@ -50,58 +57,7 @@ return {
       },
     },
   },
-  {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    config = true,
-  },
   { "tpope/vim-fugitive" },
   { "tpope/vim-surround" },
   { "tpope/vim-commentary" },
-  {
-    "mrjones2014/smart-splits.nvim",
-    lazy = false,
-    keys = {
-      {
-        "<C-S-h>",
-        "<cmd>SmartResizeLeft<cr>",
-        desc = "Smart Splits: Resize left",
-      },
-      {
-        "<C-S-j>",
-        "<cmd>SmartResizeDown<cr>",
-        desc = "Smart Splits: Resize down",
-      },
-      {
-        "<C-S-k>",
-        "<cmd>SmartResizeUp<cr>",
-        desc = "Smart Splits: Resize up",
-      },
-      {
-        "<C-S-l>",
-        "<cmd>SmartResizeRight<cr>",
-        desc = "Smart Splits: Resize Right",
-      },
-      {
-        "<C-h>",
-        "<cmd>SmartCursorMoveLeft<cr>",
-        desc = "Smart Splits: Move left",
-      },
-      {
-        "<C-j>",
-        "<cmd>SmartCursorMoveDown<cr>",
-        desc = "Smart Splits: Move down",
-      },
-      {
-        "<C-k>",
-        "<cmd>SmartCursorMoveUp<cr>",
-        desc = "Smart Splits: Move up",
-      },
-      {
-        "<C-l>",
-        "<cmd>SmartCursorMoveRight<cr>",
-        desc = "Smart Splits: Move right",
-      },
-    },
-  },
 }
