@@ -18,10 +18,13 @@ return {
       },
     },
     config = function()
-      local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup {}
-      lspconfig.pyright.setup {
+      local capabilities = require("blink.cmp").get_lsp_capabilities()
+      -- lspconfig.lua_ls.setup { capabilities = capabilities }
+      vim.lsp.enable { "lua_ls", "pyright", "ruff" }
+      vim.lsp.config("*", { capabilities = capabilities })
+      vim.lsp.config("pyright", {
         settings = {
+          capabilities = capabilities,
           pyright = {
             -- Using Ruff's import organizer
             disableOrganizeImports = true,
@@ -33,8 +36,7 @@ return {
             },
           },
         },
-      }
-      lspconfig.ruff.setup {}
+      })
     end,
   },
   {
@@ -66,5 +68,20 @@ return {
         desc = "Format",
       },
     },
+  },
+  {
+    "mason-org/mason.nvim",
+    opts = {
+      ui = {
+        icons = {
+          package_installed = "✓",
+          package_pending = "➜",
+          package_uninstalled = "✗",
+        },
+      },
+    },
+    config = function()
+      require("mason").setup {}
+    end,
   },
 }

@@ -20,17 +20,16 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap 
 
 eval "$(zoxide init zsh)"
 export PATH=$PATH:$HOME/go/bin
-export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
+
 
 alias ls="eza --icons=always"
 alias tree="eza --tree --icons --git"
 alias vim=nvim
 alias lg="lazygit"
+alias cat="bat"
 alias cd="z"
 alias cdi="zi"
-alias cat="bat"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-export PATH=$PATH:/Users/a-/.spicetify
