@@ -4,11 +4,9 @@ return {
     dependencies = {
       {
         "folke/lazydev.nvim",
-        ft = "lua", -- only load on lua files
+        ft = "lua",
         opts = {
           library = {
-            -- See the configuration section for more details
-            -- Load luvit types when the `vim.uv` word is found
             {
               path = "${3rd}/luv/library",
               words = { "vim%.uv" },
@@ -19,20 +17,18 @@ return {
     },
     config = function()
       local capabilities = require("blink.cmp").get_lsp_capabilities()
-      -- lspconfig.lua_ls.setup { capabilities = capabilities }
-      vim.lsp.enable { "lua_ls", "pyright", "ruff" }
+
+      vim.lsp.enable { "lua_ls", "basedpyright", "ruff" }
+
       vim.lsp.config("*", { capabilities = capabilities })
-      vim.lsp.config("pyright", {
+
+      vim.lsp.config("basedpyright", {
+        capabilities = capabilities,
+        offset_encoding = "utf-8",
         settings = {
-          capabilities = capabilities,
-          pyright = {
-            -- Using Ruff's import organizer
-            disableOrganizeImports = true,
-          },
-          python = {
+          basedpyright = {
             analysis = {
-              -- Ignore all files for analysis to exclusively use Ruff for linting
-              ignore = { "*" },
+              typeCheckingMode = "basic",
             },
           },
         },

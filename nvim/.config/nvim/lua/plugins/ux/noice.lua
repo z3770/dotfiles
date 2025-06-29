@@ -24,7 +24,7 @@ return {
     end,
     keys = {
       {
-        "<leader><leader>m",
+        "<leader>lm",
         "<cmd>Noice all<cr>",
         mode = { "n", "v" },
         desc = "Show messages",

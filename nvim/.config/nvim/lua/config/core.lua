@@ -30,7 +30,10 @@ set.more = false
 vim.g.mapleader = " "
 
 vim.diagnostic.config {
-  virtual_text = true,
+  virtual_text = {
+    spacing = 4,
+    source = true,
+  },
   underline = true,
   signs = true,
   update_in_insert = false,
