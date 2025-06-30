@@ -15,7 +15,7 @@ return {
         harpoon.ui:toggle_quick_menu(harpoon:list())
       end, { desc = "Harpoon: List " })
 
-      for i = 1, 5 do
+      for i = 1, 9 do
         map("n", "<leader>" .. i, function()
           harpoon:list():select(i)
         end, { desc = "Harpoon to file" .. i })
