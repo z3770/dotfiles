@@ -9,6 +9,7 @@ vim.keymap.set("n", "<C-l>", "<C-W>l")
 
 vim.keymap.set("n", "grd", vim.lsp.buf.definition, { desc = "Definition" })
 vim.keymap.set("n", "grD", vim.lsp.buf.declaration, { desc = "Declaration" })
+vim.keymap.set("n", "grt", vim.lsp.buf.type_definition, { desc = "Type definition" })
 
 vim.keymap.set("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true, desc = "Next buff" })
 
