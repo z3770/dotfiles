@@ -16,12 +16,11 @@ return {
       },
     },
     config = function()
-      local capabilities = require("blink.cmp").get_lsp_capabilities()
+      -- local capabilities = require("blink.cmp").get_lsp_capabilities()
 
       vim.lsp.enable { "lua_ls", "basedpyright", "ruff" }
 
       vim.lsp.config("*", { capabilities = capabilities })
-
       vim.lsp.config("basedpyright", {
         capabilities = capabilities,
         offset_encoding = "utf-8",

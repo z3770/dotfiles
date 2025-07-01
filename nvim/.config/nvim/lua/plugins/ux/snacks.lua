@@ -6,6 +6,7 @@ return {
   opts = {
     bigfile = { enabled = true },
     indent = { enabled = true },
+    dashboard = { enabled = true },
     input = { enabled = true },
     quickfile = { enabled = true },
     scope = { enabled = true },

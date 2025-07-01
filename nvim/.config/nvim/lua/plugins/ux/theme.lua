@@ -16,8 +16,8 @@ return {
         styles = {
           -- Style to be applied to different syntax groups
           -- Value is any valid attr-list value for `:help nvim_set_hl`
-          comments = { italic = false },
-          keywords = { italic = false, bold = true },
+          comments = { italic = true },
+          keywords = { italic = true, bold = true },
           functions = {},
           variables = {},
           -- Background styles. Can be "dark", "transparent" or "normal"
@@ -30,7 +30,7 @@ return {
 
         cache = true, -- When set to true, the theme will be cached for better performance
       }
-      vim.cmd.colorscheme "tokyonight-night"
+      vim.cmd.colorscheme "tokyonight-moon"
     end,
   },
   {
@@ -91,5 +91,5 @@ return {
       }
     end,
   },
-  { "dstein64/vim-startuptime" },
+  { "onsails/lspkind.nvim" },
 }
