@@ -25,7 +25,6 @@ export PATH=$PATH:$HOME/go/bin
 alias ls="eza --icons=always"
 alias tree="eza --tree --icons --git"
 alias vim=nvim
-alias lg="lazygit"
 alias cat="bat"
 alias cd="z"
 alias cdi="zi"
