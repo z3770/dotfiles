@@ -28,6 +28,7 @@ set.cursorline = false
 set.clipboard = "unnamedplus"
 set.more = false
 vim.g.mapleader = " "
+vim.o.inccommand = "nosplit"
 
 vim.diagnostic.config {
   virtual_text = {

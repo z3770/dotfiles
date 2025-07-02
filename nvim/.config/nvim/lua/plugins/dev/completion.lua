@@ -23,6 +23,8 @@ return {
         preset = "default",
         ["<C-u>"] = { "scroll_documentation_up", "fallback" },
         ["<C-d>"] = { "scroll_documentation_down", "fallback" },
+        ["<C-l>"] = { "snippet_forward", "fallback" },
+        ["<C-h>"] = { "snippet_backward", "fallback" },
       },
       appearance = {
         nerd_font_variant = "mono",
