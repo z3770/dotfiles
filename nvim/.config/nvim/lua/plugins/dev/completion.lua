@@ -79,6 +79,17 @@ return {
 
       sources = {
         default = { "lsp", "path", "snippets", "buffer" },
+        per_filetype = {
+          sql = { inherit_defaults = true, "vim-dadbod-completion" },
+          lua = { inherit_defaults = true, "lazydev" },
+        },
+        providers = {
+          lazydev = {
+            name = "LazyDev",
+            module = "lazydev.integrations.blink",
+            score_offset = 100,
+          },
+        },
       },
 
       fuzzy = { implementation = "prefer_rust_with_warning" },
