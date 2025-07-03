@@ -10,7 +10,7 @@ return {
     input = { enabled = true },
     quickfile = { enabled = true },
     scope = { enabled = true },
-    scroll = { enabled = true },
+    scroll = { enabled = false },
     zen = { enabled = true },
   },
   keys = {

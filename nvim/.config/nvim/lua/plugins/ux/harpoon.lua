@@ -2,7 +2,6 @@ return {
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
-    cmd = { "Harpoon", "HarpoonToggle" },
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("harpoon").setup {}
