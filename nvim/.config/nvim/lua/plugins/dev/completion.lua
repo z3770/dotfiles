@@ -30,9 +30,9 @@ return {
         nerd_font_variant = "mono",
       },
       cmdline = { enabled = false },
-      signature = { enabled = true, window = { border = "rounded" } },
+      signature = { enabled = false, window = { border = "rounded" } },
       completion = {
-        ghost_text = { enabled = true },
+        ghost_text = { enabled = false },
         menu = {
           border = "rounded",
           draw = {

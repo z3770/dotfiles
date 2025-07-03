@@ -9,7 +9,7 @@ return {
       ---@field on_colors fun(colors: ColorScheme)
       ---@field on_highlights fun(highlights: tokyonight.Highlights, colors: ColorScheme)
       require("tokyonight").setup {
-        style = "moon", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+        style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
         light_style = "day", -- The theme is used when the background is set to light
         transparent = false, -- Enable this to disable setting the background color
         terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
@@ -27,10 +27,12 @@ return {
         day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
         dim_inactive = true, -- dims inactive windows
         lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
-
+        -- on_colors = function(colors)
+        --   colors.bg = "#000000"
+        -- end,
         cache = true, -- When set to true, the theme will be cached for better performance
       }
-      vim.cmd.colorscheme "tokyonight-moon"
+      vim.cmd.colorscheme "tokyonight"
     end,
   },
   {
@@ -71,7 +73,15 @@ return {
         sections = {
           lualine_a = { "mode" },
           lualine_b = { "branch", "diff", "diagnostics" },
-          lualine_c = { { "filename", path = 1 } },
+          lualine_c = {
+            {
+              "filename",
+              file_status = true,
+              newfile_status = true,
+              path = 1,
+              shorting_target = 40,
+            },
+          },
           lualine_x = { { "filetype", icon_only = true } },
           lualine_y = {},
           lualine_z = { "location" },

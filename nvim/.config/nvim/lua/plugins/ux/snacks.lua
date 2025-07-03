@@ -6,11 +6,11 @@ return {
   opts = {
     bigfile = { enabled = true },
     indent = { enabled = true },
-    dashboard = { enabled = true },
+    dashboard = { enabled = false },
     input = { enabled = true },
     quickfile = { enabled = true },
     scope = { enabled = true },
-    scroll = { enabled = true },
+    scroll = { enabled = false },
     zen = { enabled = true },
   },
   keys = {

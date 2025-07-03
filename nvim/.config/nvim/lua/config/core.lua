@@ -37,7 +37,7 @@ vim.diagnostic.config {
   },
   underline = true,
   signs = true,
-  update_in_insert = true,
+  update_in_insert = false,
   float = {
     border = "rounded",
     source = "if_many",
