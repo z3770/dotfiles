@@ -58,6 +58,11 @@ return {
     },
   },
   { "tpope/vim-fugitive" },
-  { "tpope/vim-surround" },
   { "tpope/vim-commentary" },
+  { "tpope/vim-surround" },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true,
+  },
 }
