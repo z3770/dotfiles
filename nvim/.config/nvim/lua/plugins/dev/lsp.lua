@@ -16,7 +16,7 @@ return {
       },
     },
     config = function()
-      vim.lsp.enable { "lua_ls", "basedpyright", "ruff" }
+      vim.lsp.enable { "lua_ls", "basedpyright", "ruff", "ccls" }
       vim.lsp.config("basedpyright", {
         offset_encoding = "utf-8",
         settings = {
