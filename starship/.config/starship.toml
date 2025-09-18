@@ -5,10 +5,12 @@ palette = "catppuccin_mocha"
 
 [git_branch]
 style = "bold mauve"
+symbol = " "
 
 [directory]
 truncation_length = 4
 style = "bold lavender"
+read_only = " 󰌾"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
