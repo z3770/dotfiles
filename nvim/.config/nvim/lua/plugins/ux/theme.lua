@@ -1,38 +1,63 @@
 return {
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
+  { 
+    "catppuccin/nvim", name = "catppuccin", priority = 1000,
     config = function()
-      ---@class tokyonight.Config
-      ---@field on_colors fun(colors: ColorScheme)
-      ---@field on_highlights fun(highlights: tokyonight.Highlights, colors: ColorScheme)
-      require("tokyonight").setup {
-        style = "storm", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
-        light_style = "day", -- The theme is used when the background is set to light
-        transparent = true, -- Enable this to disable setting the background color
-        terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-        styles = {
-          -- Style to be applied to different syntax groups
-          -- Value is any valid attr-list value for `:help nvim_set_hl`
-          comments = { italic = true },
-          keywords = { italic = true, bold = true },
-          functions = {},
-          variables = {},
-          -- Background styles. Can be "dark", "transparent" or "normal"
-          sidebars = "dark", -- style for sidebars, see below
-          floats = "dark", -- style for floating windows
+      require("catppuccin").setup({
+    flavour = "mocha", -- latte, frappe, macchiato, mocha
+    background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+    },
+    transparent_background = false, -- disables setting the background color.
+    float = {
+        transparent = false, -- enable transparent floating windows
+        solid = false, -- use solid styling for floating windows, see |winborder|
+    },
+    show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
+    term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+    dim_inactive = {
+        enabled = false, -- dims the background color of inactive window
+        shade = "dark",
+        percentage = 0.15, -- percentage of the shade to apply to the inactive window
+    },
+    no_italic = false, -- Force no italic
+    no_bold = false, -- Force no bold
+    no_underline = false, -- Force no underline
+    styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+        comments = { "italic" }, -- Change the style of comments
+        conditionals = { "italic" },
+        loops = {},
+        functions = {},
+        keywords = {},
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+        -- miscs = {}, -- Uncomment to turn off hard-coded styles
+    },
+    color_overrides = {},
+    custom_highlights = {},
+    default_integrations = true,
+    auto_integrations = false,
+    integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        treesitter = true,
+        notify = false,
+        mini = {
+            enabled = true,
+            indentscope_color = "",
         },
-        day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
-        dim_inactive = true, -- dims inactive windows
-        lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
-        -- on_colors = function(colors)
-        --   colors.bg = "#000000"
-        -- end,
-        cache = true, -- When set to true, the theme will be cached for better performance
-      }
-      vim.cmd.colorscheme "tokyonight"
+        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+    },
+})
+
+-- setup must be called before loading
+vim.cmd.colorscheme "catppuccin"
     end,
   },
   {
