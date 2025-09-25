@@ -94,7 +94,6 @@ automatically-unhide-macos-hidden-apps = false
     cmd-h = [] # Disable "hide application"
     cmd-alt-h = [] # Disable "hide others"
     alt-f = 'macos-native-fullscreen'
-    alt-shift-space= 'layout floating tiling'
     alt-shift-backslash= 'balance-sizes'
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-slash = 'layout tiles horizontal vertical'
@@ -156,6 +155,13 @@ automatically-unhide-macos-hidden-apps = false
     esc = ['reload-config', 'mode main']
     r = ['flatten-workspace-tree', 'mode main'] # reset layout
     backspace = ['close-all-windows-but-current', 'mode main']
+    f = 'layout floating tiling'
+
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
     #s = ['layout sticky tiling', 'mode main']
 
+[[on-window-detected]]
+if.app-id="com.mitchellh.ghostty"
+run= [
+  "layout floating",
+]
