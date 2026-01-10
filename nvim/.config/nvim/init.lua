@@ -1,3 +1,2 @@
-vim.loader.enable() -- Cache modules
-require("config") -- Core config
-require("config.lazy_setup") -- Lazy
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
