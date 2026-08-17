@@ -42,3 +42,7 @@ function y() {
 	rm -f -- "$tmp"
 }
 export PATH="/Users/z/.local/bin:$PATH"  # Added by Deck.app
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"

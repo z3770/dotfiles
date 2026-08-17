@@ -5,6 +5,13 @@
 add_newline = false
 right_format = """$time"""
 
+# Disable git modules
+[git_branch]
+disabled = true
+
+[git_status]
+disabled = true
+
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
 success_symbol = '[➜](bold blue)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
