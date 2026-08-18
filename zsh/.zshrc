@@ -30,9 +30,9 @@ autoload edit-command-line
 zle -N edit-command-line
 bindkey '^x^e' edit-command-line
 
-chpwd() {
-    ls -a
-}
+# chpwd() {
+#     ls -a
+# }
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
