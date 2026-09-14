@@ -1,0 +1,17 @@
+theme = "TokyoNight Night"
+background = #16161e
+
+font-size = 18
+mouse-hide-while-typing = true
+macos-titlebar-style = hidden
+window-padding-x = 24
+window-padding-y = 12
+cursor-style = block
+shell-integration-features = no-cursor, ssh-env
+macos-option-as-alt = left
+quit-after-last-window-closed = true
+background-opacity = 0.85
+background-blur = true
+
+# Quake-style dropdown terminal, toggled from any app
+keybind = global:cmd+grave_accent=toggle_quick_terminal

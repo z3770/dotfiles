@@ -1,0 +1,6 @@
+.claude/
+!/claude/.claude/
+# Chrome writes this next to an unpacked theme
+*.pak
+# Written by the atuin installer, not a setting
+atuin/.config/atuin/atuin-receipt.json

@@ -1,0 +1,19 @@
+[theme]
+name = "tokyonight-night"
+
+[colors]
+Base = "#c0caf5"
+Title = "#bb9af7"
+Muted = "#565f89"
+Annotation = "#737aa2"
+Guidance = "#9ece6a"
+Important = "#ff9e64"
+AlertInfo = "#7aa2f7"
+AlertWarn = "#e0af68"
+AlertError = "#f7768e"
+SyntaxCommand = "#7aa2f7"
+SyntaxFlag = "#e0af68"
+SyntaxString = "#9ece6a"
+SyntaxVariable = "#bb9af7"
+SyntaxOperator = "#89ddff"
+SyntaxComment = "#565f89"

@@ -1,0 +1,24 @@
+name: tokyonight-night
+primary: "#7aa2f7"
+secondary: "#bb9af7"
+accent: "#7dcfff"
+background: "#16161e"
+surface: "#16161e"
+panel: "#292e42"
+error: "#f7768e"
+success: "#9ece6a"
+warning: "#e0af68"
+dark: true
+
+url:
+  base: "#c0caf5"
+  protocol: "bold #7dcfff"
+
+method:
+  get: "#7aa2f7"
+  post: "#9ece6a"
+  put: "#e0af68"
+  delete: "#f7768e"
+  patch: "#bb9af7"
+  options: "#565f89"
+  head: "#7dcfff"
