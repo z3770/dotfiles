@@ -13,5 +13,8 @@ return {
       end
     end
     opts.options.theme = theme
+
+    -- Drop LazyVim's clock: the macOS menu bar already shows the time.
+    opts.sections.lualine_z = {}
   end,
 }
