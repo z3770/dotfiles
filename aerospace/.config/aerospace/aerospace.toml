@@ -23,7 +23,7 @@ on-mode-changed = []
     inner.vertical =  10
     outer.left =      15
     outer.bottom =    15
-    outer.top =       10
+    outer.top =       5
     outer.right =     15
 
 [mode.main.binding]
