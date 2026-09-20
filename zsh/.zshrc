@@ -120,3 +120,4 @@ function y() {
 }
 
 eval "$(atuin init zsh)"
+export PATH="/Users/z/.local/bin:$PATH"  # Added by Deck.app
