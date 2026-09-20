@@ -11,6 +11,7 @@ Each top-level directory is a [GNU Stow](https://www.gnu.org/software/stow/) pac
 | `aerospace` | [AeroSpace](https://github.com/nikitabobko/AeroSpace)        | Tiling window manager for macOS                                                                 |
 | `atuin`    | [Atuin](https://atuin.sh)                                     | Shell history search and sync, with Tokyo Night theme                                           |
 | `bat`      | [bat](https://github.com/sharkdp/bat)                         | `cat` replacement with syntax highlighting, with Tokyo Night theme                              |
+| `borders`  | [JankyBorders](https://github.com/FelixKratz/JankyBorders)    | Active-window border for AeroSpace, with a Tokyo Night gradient                                  |
 | `chrome`   | Google Chrome                                                 | Unpacked Tokyo Night browser theme                                                              |
 | `claude`   | [Claude Code](https://claude.com/claude-code)                 | Tokyo Night theme for Claude Code                                                               |
 | `eza`      | [eza](https://github.com/eza-community/eza)                   | `ls` replacement with icons and git status, with custom theme                                   |
@@ -43,5 +44,6 @@ stow zsh tmux nvim ghostty    # or any other package names
 - **tmux**: TPM and its plugins install automatically on first start.
 - **nvim**: LazyVim installs plugins on first launch, pinned by `lazy-lock.json`.
 - **yazi**: run `ya pkg install` to install plugins from `package.toml`.
+- **borders**: install with `brew tap felixkratz/formulae && brew install borders`. AeroSpace starts it via `after-startup-command`.
 - **chrome**: open `chrome://extensions`, enable Developer mode, and choose "Load unpacked" with `chrome/tokyonight-night`. This package is not stowed.
 - **lazygit**: the config lives under `~/Library/Application Support/lazygit`, the macOS default path.
