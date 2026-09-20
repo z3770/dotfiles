@@ -1,8 +1,5 @@
 bindkey -e
 
-# Blank line below the tmux status bar on shell start
-[ -n "$TMUX" ] && echo
-
 # Powerlevel10k instant prompt. Keep it near the top: anything that prints output must go above.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
