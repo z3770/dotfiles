@@ -72,6 +72,7 @@ on-mode-changed = []
     alt-cmd-k = 'join-with up'
     alt-cmd-l = 'join-with right'
     alt-f = 'fullscreen'
+    alt-enter = 'exec-and-forget open -na Ghostty'
 
 
 [[on-window-detected]]
@@ -101,6 +102,26 @@ on-mode-changed = []
 [[on-window-detected]]
     if.app-id = "com.TickTick.task.mac"
     run = "move-node-to-workspace 4"
+
+[[on-window-detected]]
+    if.app-id = "com.apple.systempreferences"
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = "com.apple.calculator"
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = "com.apple.archiveutility"
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = "com.apple.finder"
+    run = 'layout floating'
+
+[[on-window-detected]]
+    if.app-id = "com.1password.1password"
+    run = 'layout floating'
 
 [mode.resize.binding]
     b = ['balance-sizes', 'mode main']
