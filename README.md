@@ -20,6 +20,7 @@ Each top-level directory is a [GNU Stow](https://www.gnu.org/software/stow/) pac
 | `nvim`     | [Neovim](https://neovim.io) + [LazyVim](https://lazyvim.org)  | Editor with transparent Tokyo Night, oil.nvim explorer, and vim-tmux-navigator                  |
 | `posting`  | [Posting](https://posting.sh)                                 | Terminal HTTP client, with Tokyo Night theme                                                    |
 | `tmux`     | [tmux](https://github.com/tmux/tmux)                          | Terminal multiplexer with TPM, session persistence, a sessionizer script, and AI key macros     |
+| `wallpapers` | Omarchy backgrounds                                          | Tokyo Night wallpaper set from [Omarchy](https://github.com/omacom/omarchy), stowed to `~/Pictures/Wallpapers` |
 | `yazi`     | [Yazi](https://yazi-rs.github.io)                             | Terminal file manager with the sshfs plugin                                                     |
 | `zsh`      | [Zsh](https://www.zsh.org)                                    | Shell with Powerlevel10k, fzf, fzf-tab, autosuggestions, syntax highlighting, zoxide, fnm       |
 
@@ -45,5 +46,6 @@ stow zsh tmux nvim ghostty    # or any other package names
 - **nvim**: LazyVim installs plugins on first launch, pinned by `lazy-lock.json`.
 - **yazi**: run `ya pkg install` to install plugins from `package.toml`.
 - **borders**: install with `brew tap felixkratz/formulae && brew install borders`. AeroSpace starts it via `after-startup-command`.
+- **wallpapers**: set one from System Settings > Wallpaper, or `osascript -e 'tell application "System Events" to tell every desktop to set picture to "$HOME/Pictures/Wallpapers/omarchy-tokyo-night/5-oma-cityscape.jpg"'`.
 - **chrome**: open `chrome://extensions`, enable Developer mode, and choose "Load unpacked" with `chrome/tokyonight-night`. This package is not stowed.
 - **lazygit**: the config lives under `~/Library/Application Support/lazygit`, the macOS default path.
