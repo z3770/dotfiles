@@ -16,5 +16,10 @@ return {
 
     -- Drop LazyVim's clock: the macOS menu bar already shows the time.
     opts.sections.lualine_z = {}
+
+    -- Keep the cursor position, drop the progress percentage next to it.
+    opts.sections.lualine_y = {
+      { "location", padding = { left = 1, right = 1 } },
+    }
   end,
 }
