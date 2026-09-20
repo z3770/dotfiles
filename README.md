@@ -46,6 +46,6 @@ stow zsh tmux nvim ghostty    # or any other package names
 - **nvim**: LazyVim installs plugins on first launch, pinned by `lazy-lock.json`.
 - **yazi**: run `ya pkg install` to install plugins from `package.toml`.
 - **borders**: install with `brew tap felixkratz/formulae && brew install borders`. AeroSpace starts it via `after-startup-command`.
-- **wallpapers**: set one from System Settings > Wallpaper, or `osascript -e 'tell application "System Events" to tell every desktop to set picture to "$HOME/Pictures/Wallpapers/omarchy-tokyo-night/5-oma-cityscape.jpg"'`.
+- **wallpapers**: set one from System Settings > Wallpaper, or `osascript -e 'tell application "System Events" to tell every desktop to set picture to "$HOME/Pictures/Wallpapers/omarchy-tokyo-night/0-winding-road.webp"'`.
 - **chrome**: open `chrome://extensions`, enable Developer mode, and choose "Load unpacked" with `chrome/tokyonight-night`. This package is not stowed.
 - **lazygit**: the config lives under `~/Library/Application Support/lazygit`, the macOS default path.
