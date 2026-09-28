@@ -21,12 +21,13 @@ on-mode-changed = []
 [gaps]
     # borders draws a 6px ring outside each window. These values leave the
     # same 10px of clear space between two borders and between a border and
-    # the screen edge: inner = 10 + 2*6, outer = 10 + 6.
+    # the screen edge: inner = 10 + 2*6, outer = 10 + 6. The top is tighter
+    # because the tall notch menu bar already adds space above the windows.
     inner.horizontal = 22
     inner.vertical =   22
     outer.left =       16
     outer.bottom =     16
-    outer.top =        16
+    outer.top =        10
     outer.right =      16
 
 [mode.main.binding]
