@@ -1,7 +1,7 @@
 theme = "TokyoNight Night"
 background = #16161e
 
-font-size = 18
+font-size = 16
 mouse-hide-while-typing = true
 macos-titlebar-style = hidden
 window-padding-x = 24
