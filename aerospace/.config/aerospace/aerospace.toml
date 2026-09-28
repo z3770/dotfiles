@@ -19,12 +19,15 @@ on-mode-changed = []
     9 = 'secondary'
 
 [gaps]
-    inner.horizontal = 10
-    inner.vertical =  10
-    outer.left =      15
-    outer.bottom =    15
-    outer.top =       5
-    outer.right =     15
+    # borders draws a 6px ring outside each window. These values leave the
+    # same 10px of clear space between two borders and between a border and
+    # the screen edge: inner = 10 + 2*6, outer = 10 + 6.
+    inner.horizontal = 22
+    inner.vertical =   22
+    outer.left =       16
+    outer.bottom =     16
+    outer.top =        16
+    outer.right =      16
 
 [mode.main.binding]
     cmd-m = []
