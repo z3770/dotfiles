@@ -116,6 +116,10 @@ on-mode-changed = []
     run = 'layout floating'
 
 [[on-window-detected]]
+    if.app-id = "com.spotify.client"
+    run = 'layout floating'
+
+[[on-window-detected]]
     if.app-id = "com.apple.archiveutility"
     run = 'layout floating'
 
