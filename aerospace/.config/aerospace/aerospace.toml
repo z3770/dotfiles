@@ -109,7 +109,7 @@ on-mode-changed = []
 
 [[on-window-detected]]
     if.app-id = "com.electron.wispr-flow"
-    run = "move-node-to-workspace 8"
+    run = ["move-node-to-workspace 8", "layout floating"]
 
 [[on-window-detected]]
     if.app-id = "com.apple.systempreferences"
