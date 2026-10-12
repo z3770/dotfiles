@@ -158,3 +158,11 @@ rules = [
 	{ url = "*", fg = "#c0caf5" }
 ]
     
+[git]
+unstaged  = { fg = "#e0af68" }
+staged    = { fg = "#9ece6a" }
+added     = { fg = "#9ece6a" }
+untracked = { fg = "#7dcfff" }
+ignored   = { fg = "#565f89" }
+deleted   = { fg = "#f7768e", bold = true }
+updated   = { fg = "#e0af68" }

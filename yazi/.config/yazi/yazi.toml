@@ -1,2 +1,28 @@
 [mgr]
 show_hidden = true
+
+[[plugin.prepend_fetchers]]
+url   = "*"
+run   = "git"
+group = "git"
+
+[[plugin.prepend_fetchers]]
+url   = "*/"
+run   = "git"
+group = "git"
+
+# Tabular files open in tabiew (tw); the preview stays the default
+[opener]
+tabiew = [
+	{ run = "tw %s1", desc = "tabiew", block = true },
+]
+tabiew-sqlite = [
+	{ run = "tw -f sqlite %s1", desc = "tabiew", block = true },
+]
+
+[open]
+prepend_rules = [
+	{ url = "*.{csv,tsv,parquet,pqt,json,jsonl,arrow,avro,fwf,xls,xlsx,xlsm,xlsb}", use = [ "tabiew", "edit", "reveal" ] },
+	{ url = "*.{db,sqlite}", use = [ "tabiew", "reveal" ] },
+	{ url = "*.sqlite3", use = [ "tabiew-sqlite", "reveal" ] },
+]
