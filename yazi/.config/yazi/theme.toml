@@ -4,10 +4,6 @@ syntect_theme = "~/.config/bat/themes/tokyonight_night.tmTheme"
 
 cwd = { fg = "#a9b1d6", italic = true }
 
-# Hovered
-hovered         = { bg = "#292e42" }
-preview_hovered = { bg = "#292e42" }
-
 # Find
 find_keyword  = { fg = "#16161e", bg = "#ff9e64", bold = true }
 find_position = { fg = "#0db9d7", bg = "#192b38", bold = true }
@@ -26,6 +22,12 @@ count_selected = { fg = "#16161e", bg = "#7aa2f7" }
 # Border
 border_symbol = "│"
 border_style  = { fg = "#27a1b9" }
+
+# Hovered
+[indicator]
+parent  = { bg = "#292e42" }
+current = { bg = "#292e42" }
+preview = { bg = "#292e42" }
 
 # Tab
 [tabs]
@@ -101,7 +103,7 @@ separator_style = { fg = "#565f89" }
 [confirm]
 border  = { fg = "#0db9d7" }
 title   = { fg = "#27a1b9" }
-content = {}
+body    = {}
 list    = {}
 btn_yes = { bg = "#283457" }
 btn_no  = {}
@@ -124,11 +126,9 @@ icon_info = ""
 
 # Help
 [help]
-on      = { fg = "#9ece6a" }
-run     = { fg = "#bb9af7" }
-desc    = { fg = "#7dcfff" }
+chord   = { fg = "#9ece6a" }
+action  = { fg = "#bb9af7" }
 hovered = { bg = "#292e42" }
-footer  = { fg = "#c0caf5", bg = "#1a1b26" }
 
 [filetype]
 
