@@ -1,0 +1,4 @@
+# Base markdownlint rules for every markdown file opened in nvim.
+config:
+  # Long lines are normal in prose; let the editor wrap them
+  MD013: false
