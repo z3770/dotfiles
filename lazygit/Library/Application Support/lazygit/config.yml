@@ -1,5 +1,7 @@
 gui:
   nerdFontsVersion: "3"
+  # Scroll the diff panel 1 line per wheel event (default 2) for smoother scrolling
+  scrollHeight: 1
   theme:
     activeBorderColor:
       - "#ff9e64"
@@ -25,3 +27,10 @@ gui:
       - "#db4b4b"
     defaultFgColor:
       - "#c0caf5"
+
+git:
+  # Render diffs with delta (styled by ~/.config/git/config); side-by-side is
+  # too wide for the diff panel, so --features= drops it here
+  diffRenderers:
+    - type: stdinFilter
+      command: delta --paging=never --features=

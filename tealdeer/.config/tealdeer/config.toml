@@ -1,0 +1,22 @@
+[updates]
+# Refresh the offline pages cache in the background once a week
+auto_update = true
+auto_update_interval_hours = 168
+
+# Tokyonight night colors
+[style.description]
+foreground = { rgb = { r = 192, g = 202, b = 245 } }
+
+[style.command_name]
+foreground = { rgb = { r = 122, g = 162, b = 247 } }
+bold = true
+
+[style.example_text]
+foreground = { rgb = { r = 158, g = 206, b = 106 } }
+
+[style.example_code]
+foreground = { rgb = { r = 125, g = 207, b = 255 } }
+
+[style.example_variable]
+foreground = { rgb = { r = 224, g = 175, b = 104 } }
+italic = true

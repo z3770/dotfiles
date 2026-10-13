@@ -1,0 +1,33 @@
+# Shared git settings tracked in dotfiles. Git reads this file in addition to
+# ~/.gitconfig, which keeps identity and signing (machine-specific, untracked).
+
+[core]
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	features = side-by-side-view
+	navigate = true          # n / N jump between files in a diff
+	line-numbers = true
+	syntax-theme = tokyonight_night
+	# Tokyonight night colors for added and removed lines
+	plus-style = syntax "#20303b"
+	plus-emph-style = syntax "#2c5a66"
+	minus-style = syntax "#37222c"
+	minus-emph-style = syntax "#713137"
+	line-numbers-plus-style = "#9ece6a"
+	line-numbers-minus-style = "#f7768e"
+	line-numbers-zero-style = "#3b4261"
+	file-style = "#7aa2f7" bold
+	file-decoration-style = "#7aa2f7" ul
+	hunk-header-style = file line-number syntax
+	hunk-header-decoration-style = "#3b4261" box
+
+# Separate feature so narrow views (lazygit) can turn it off with --features=
+[delta "side-by-side-view"]
+	side-by-side = true
+
+[merge]
+	conflictStyle = zdiff3

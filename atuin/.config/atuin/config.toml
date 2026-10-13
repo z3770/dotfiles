@@ -91,7 +91,7 @@
 
 ## enable or disable showing a preview of the selected command
 ## useful when the command is longer than the terminal width and is cut off
-# show_preview = true
+show_preview = true
 
 ## what to do when the escape key is pressed when searching
 ## possible values: return-original, return-query
@@ -144,7 +144,7 @@
 ## Configure the maximum height of the preview to show.
 ## Useful when you have long scripts in your history that you want to distinguish
 ## by more than the first few lines.
-# max_preview_height = 4
+max_preview_height = 8
 
 ## Configure whether or not to show the help row, which includes the current Atuin
 ## version (and whether an update is available), a keymap hint, and the total
@@ -269,7 +269,7 @@ search_mode = "daemon-fuzzy"
 ## auto: length of the selected command.
 ## static: length of the longest command stored in the history.
 ## fixed: use max_preview_height as fixed height.
-# strategy = "auto"
+strategy = "auto"
 
 [daemon]
 enabled = true
@@ -361,6 +361,8 @@ width = "80%"
 height = "60%"
 
 [ui]
+# Exit code (red on failure) and directory next to each command
+columns = ["exit", "duration", "time", { type = "directory", width = 24 }, "command"]
 
 [ai]
 enabled = true
