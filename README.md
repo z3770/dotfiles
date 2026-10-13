@@ -49,3 +49,7 @@ stow zsh tmux nvim ghostty    # or any other package names
 - **wallpapers**: set one from System Settings > Wallpaper, or `osascript -e 'tell application "System Events" to tell every desktop to set picture to "$HOME/Pictures/Wallpapers/omarchy-tokyo-night/0-winding-road.webp"'`.
 - **chrome**: open `chrome://extensions`, enable Developer mode, and choose "Load unpacked" with `chrome/tokyonight-night`. This package is not stowed.
 - **lazygit**: the config lives under `~/Library/Application Support/lazygit`, the macOS default path.
+
+## To-do
+
+- [ ] Replace tmux with Superlogical's terminal multiplexer once it is released. Its beta is not out yet; Superlogical's terminal, Rex, started public testing on 5 October 2026. See [the announcement](https://www.superlogical.com/updates/public-testing-beginning) and join the waitlist there to get notified.
