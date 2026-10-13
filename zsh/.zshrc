@@ -8,17 +8,39 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Cache the output of `tool init` commands. Running them all on every shell
+# costs ~45 ms. Sets REPLY to the cache file; source it at top level, since
+# typeset in a file sourced inside a function would make its variables local.
+# The cache is rebuilt when the tool's binary is newer (e.g. after an upgrade)
+# and once a day, since some output also depends on the tool's own state
+# (carapace lists the commands it found). Empty output is never cached.
+# Usage: _cached_init <name> <command> [args...] && source "$REPLY"
+_cached_init() {
+  REPLY=${XDG_CACHE_HOME:-$HOME/.cache}/zsh/$1.zsh
+  local bin=${commands[$2]:-$2} out
+  local -a stale=($REPLY(N.mh+24))
+  shift
+  if [[ ! -s $REPLY || $bin -nt $REPLY ]] || (( $#stale )); then
+    out=$("$@") && [[ -n $out ]] || return 1
+    mkdir -p ${REPLY:h} && print -r -- $out >| $REPLY
+  fi
+}
+
 # Homebrew PATH, FPATH and HOMEBREW_PREFIX for every shell, not only login shells.
 # Must run before compinit (brew completions) and anything that calls a brew binary.
-eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+_cached_init brew /opt/homebrew/bin/brew shellenv zsh && source "$REPLY"
 typeset -U path fpath
 
-# Completion init with full security audit at most once a day
+# Completion init with full security audit at most once a day. compinit does
+# not rewrite a dump that is still valid, so touch it after the audit;
+# otherwise every shell would audit once the dump is a day old.
 autoload -Uz compinit
-for _zcompdump in ~/.zcompdump(N.mh+24); do
-  compinit
-done
-compinit -C
+_zcompdump=(~/.zcompdump(N.mh+24))
+if (( $#_zcompdump )); then
+  compinit && touch ~/.zcompdump
+else
+  compinit -C
+fi
 unset _zcompdump
 
 # Tokyonight night colors for files and dirs in completion lists (zsh and
@@ -42,7 +64,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # Carapace: completions with descriptions for 1000+ CLIs, like fish ships.
 # Bridges fall back to zsh and bash completion scripts for unknown commands.
 export CARAPACE_BRIDGES='zsh,bash'
-source <(carapace _carapace zsh)
+_cached_init carapace carapace _carapace zsh && source "$REPLY"
 
 # Tokyonight night colors for fzf (also used by fzf-tab)
 export FZF_DEFAULT_OPTS="--color=bg+:#283457,bg:-1,border:#27a1b9,fg:#c0caf5,gutter:-1 \
@@ -62,7 +84,7 @@ zstyle ':fzf-tab:*' query-string prefix first
 zstyle ':fzf-tab:complete:(cd|z|__zoxide_z):*' fzf-preview 'eza -1 --icons=always --color=always $realpath'
 
 # fzf key bindings (loads before fzf-tab)
-source <(fzf --zsh)
+_cached_init fzf fzf --zsh && source "$REPLY"
 
 # fzf-tab completion menu (loads before autosuggestions and syntax highlighting)
 source "$HOMEBREW_PREFIX/opt/fzf-tab/share/fzf-tab/fzf-tab.zsh"
@@ -78,7 +100,7 @@ export EZA_CONFIG_DIR="$HOME/.config/eza"
 
 source "$HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme"
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-eval "$(zoxide init zsh)"
+_cached_init zoxide zoxide init zsh && source "$REPLY"
 # zi: zoxide's fzf picker with an eza preview (its macOS default is plain ls).
 # Setting this replaces zoxide's default fzf flags, so they are repeated here.
 export _ZO_FZF_OPTS="--bind=ctrl-z:ignore,btab:up,tab:down --cycle --keep-right \
@@ -87,7 +109,7 @@ export _ZO_FZF_OPTS="--bind=ctrl-z:ignore,btab:up,tab:down --cycle --keep-right 
   --preview-window=right,50%,border-rounded"
 
 # direnv, part 2: load and unload .envrc variables on every cd
-(( ${+commands[direnv]} )) && emulate zsh -c "$(direnv hook zsh)"
+(( ${+commands[direnv]} )) && _cached_init direnv-hook direnv hook zsh && emulate zsh -c 'source "$REPLY"'
 
 # Node version manager, auto-switches versions from .nvmrc/.node-version on cd
 eval "$(fnm env --use-on-cd)"
@@ -162,5 +184,5 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-eval "$(atuin init zsh)"
+_cached_init atuin atuin init zsh && source "$REPLY"
 export PATH="/Users/z/.local/bin:$PATH"  # Added by Deck.app
