@@ -6,7 +6,6 @@ prepend_keymap = [
 
   # Navigation
   { on = "l", run = "plugin smart-enter",                   desc = "Enter the child directory, or open the file" },
-  { on = "f", run = "plugin jump-to-char",                  desc = "Jump to char" },
   { on = "F", run = "plugin smart-filter",                  desc = "Smart filter" },
 
   # Tools
