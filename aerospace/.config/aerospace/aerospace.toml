@@ -19,18 +19,18 @@ on-mode-changed = []
     9 = 'secondary'
 
 [gaps]
-    # borders draws an 8px ring outside each window. These values leave the
+    # borders draws a 6px ring outside each window. These values leave the
     # same 10px of clear space between two borders and between a border and
-    # the screen edge: inner = 10 + 2*8, outer = 10 + 8. On the main monitor
-    # the top also clears the 22px Vorssaint dynamic island: 22 + 10 + 8. The
+    # the screen edge: inner = 10 + 2*6, outer = 10 + 6. On the main monitor
+    # the top also clears the 22px Vorssaint dynamic island: 22 + 10 + 6. The
     # built-in display keeps a tighter top because its notch menu bar already
     # adds space above the windows.
-    inner.horizontal = 26
-    inner.vertical =   26
-    outer.left =       18
-    outer.bottom =     18
-    outer.top =        [{ monitor.built-in = 10 }, { monitor.main = 40 }, 18]
-    outer.right =      18
+    inner.horizontal = 22
+    inner.vertical =   22
+    outer.left =       16
+    outer.bottom =     16
+    outer.top =        [{ monitor.built-in = 10 }, { monitor.main = 38 }, 16]
+    outer.right =      16
 
 [mode.main.binding]
     cmd-m = []
