@@ -1,0 +1,8 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "openai/gpt-6.1-sol",
+  "plugins": [
+    "superpowers@git+https://github.com/obra/superpowers.git#v7.0.0",
+    "./plugins/caveman"
+  ]
+}

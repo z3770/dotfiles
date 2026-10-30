@@ -10,8 +10,8 @@ cursor-style = block
 shell-integration-features = no-cursor, ssh-env
 macos-option-as-alt = left
 quit-after-last-window-closed = true
-background-opacity = 0.85
-background-blur = true
+background-opacity = 1
+background-blur = false
 
 # Quake-style dropdown terminal, toggled from any app
 keybind = global:cmd+grave_accent=toggle_quick_terminal

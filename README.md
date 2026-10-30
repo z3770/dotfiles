@@ -18,6 +18,7 @@ Each top-level directory is a [GNU Stow](https://www.gnu.org/software/stow/) pac
 | `ghostty`  | [Ghostty](https://ghostty.org)                                | Terminal emulator: translucent background, hidden titlebar, global quick terminal (`cmd+\``)    |
 | `lazygit`  | [lazygit](https://github.com/jesseduffield/lazygit)           | Terminal UI for git                                                                             |
 | `nvim`     | [Neovim](https://neovim.io) + [LazyVim](https://lazyvim.org)  | Editor with transparent Tokyo Night, oil.nvim explorer, and vim-tmux-navigator                  |
+| `opencode` | [OpenCode](https://opencode.ai)                              | AI coding agent settings, default model, plugins, and Tokyo Night CLI theme                     |
 | `posting`  | [Posting](https://posting.sh)                                 | Terminal HTTP client, with Tokyo Night theme                                                    |
 | `tmux`     | [tmux](https://github.com/tmux/tmux)                          | Terminal multiplexer with TPM, session persistence, a sessionizer script, and AI key macros     |
 | `wallpapers` | Omarchy backgrounds                                          | Tokyo Night wallpaper set from [Omarchy](https://github.com/omacom/omarchy), stowed to `~/Pictures/Wallpapers` |
@@ -49,6 +50,7 @@ stow zsh tmux nvim ghostty    # or any other package names
 - **wallpapers**: set one from System Settings > Wallpaper, or `osascript -e 'tell application "System Events" to tell every desktop to set picture to "$HOME/Pictures/Wallpapers/omarchy-tokyo-night/0-winding-road.webp"'`.
 - **chrome**: open `chrome://extensions`, enable Developer mode, and choose "Load unpacked" with `chrome/tokyonight-night`. This package is not stowed.
 - **lazygit**: the config lives under `~/Library/Application Support/lazygit`, the macOS default path.
+- **opencode**: stows `opencode.json` and `cli.json` into `~/.config/opencode`. Install the Caveman plugin separately at `~/.config/opencode/plugins/caveman`; plugins, skills, credentials, and runtime files are not included.
 
 ## To-do
 
