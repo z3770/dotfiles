@@ -137,6 +137,10 @@ on-mode-changed = []
     if.app-id = "com.1password.1password"
     run = 'layout floating'
 
+[[on-window-detected]]
+    if.app-id = "moe.Throne.macosx"
+    run = 'layout floating'
+
 [mode.resize.binding]
     b = ['balance-sizes', 'mode main']
     h = 'resize width -50'
@@ -151,4 +155,3 @@ on-mode-changed = []
     r = ['flatten-workspace-tree', 'mode main']
     f = ['layout floating tiling', 'mode main']
     enter = ['close-all-windows-but-current', 'mode main']
-
