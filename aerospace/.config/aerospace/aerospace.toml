@@ -138,7 +138,7 @@ on-mode-changed = []
     run = 'layout floating'
 
 [[on-window-detected]]
-    if.app-id = "moe.Throne.macosx"
+    if.app-id = "com.yourcompany.AmneziaVPN"
     run = 'layout floating'
 
 [mode.resize.binding]
