@@ -1,0 +1,6 @@
+{
+  "$schema": "https://pi.dev/schemas/settings.schema.json",
+  "defaultProvider": "openai",
+  "defaultModel": "gpt-6.1-sol",
+  "theme": "tokyonight-night"
+}
