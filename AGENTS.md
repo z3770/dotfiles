@@ -47,9 +47,6 @@ support table for user-facing details; keep it in sync with platform changes.
 - **Lazygit is cross-platform**, but its package targets the macOS directory
   `~/Library/Application Support/lazygit`. Linux normally uses
   `~/.config/lazygit`; do not claim the current Stow layout covers both.
-- **tmux targets Unix-like environments**, including macOS and Linux. Its
-  sessionizer requires Bash, zoxide, and fzf; popups invoke Lazygit and Pi.
-  Clipboard backends are platform-dependent. Native Windows is not the target.
 - **Yazi is cross-platform**, but custom helpers assume Unix commands and
   SSHFS/FUSE support. Custom data-file openers require tabiew (`tw`).
 - **Wallpapers are portable assets**; System Settings and `osascript` wallpaper
@@ -58,8 +55,7 @@ support table for user-facing details; keep it in sync with platform changes.
   `posting`, `tealdeer`) have no identified hardcoded macOS executable/config
   path. Do not equate this with tested Linux or native Windows support.
   Dependencies, authentication, model access, fonts, and terminal capabilities
-  still need to be available. Git/Lazygit use delta; tmux clock removal
-  is a macOS-oriented UI choice, not an OS restriction.
+  still need to be available. Git/Lazygit use delta.
 
 Do not introduce additional hardcoded machine paths unnecessarily. If adding
 platform-specific behavior, document it and use OS guards or separate config

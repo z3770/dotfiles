@@ -1,6 +1,6 @@
 #!/bin/bash
 # Tokyo Night "night" palette, colors as 0xAARRGGBB.
-#   active   blue #7aa2f7, same as the active tmux tab
+#   active   blue #7aa2f7
 #   inactive transparent, only the focused window gets a ring
 
 options=(

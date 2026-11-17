@@ -233,7 +233,6 @@ search_mode = "daemon-fuzzy"
 #   "podman",
 #   "port",
 #   "systemctl",
-#   "tmux",
 #   "yarn",
 # ]
 
@@ -343,22 +342,6 @@ name = "tokyonight-night"
 ## - array of strings: show commands run by any shell in the array; "" includes
 ##   commands that have no recorded shell
 # shells = "auto"
-
-[tmux]
-## Enable using atuin with tmux popup (requires tmux >= 3.2)
-## When enabled and running inside tmux, Atuin will use a popup window for interactive search.
-## Set to false to disable the popup.
-## This can also be controlled with the ATUIN_TMUX_POPUP environment variable.
-## Note: The tmux popup is currently supported in zsh, bash, and fish shells. This currently doesn't work with iTerm native tmux integration.
-enabled = true
-
-## Width of the tmux popup window
-## Can be a percentage, or integer (e.g. "100" means 100 characters wide)
-width = "80%"
-
-## Height of the tmux popup window
-## Can be a percentage, or integer (e.g. "100" means 100 lines tall)
-height = "60%"
 
 [ui]
 # Exit code (red on failure) and directory next to each command

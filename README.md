@@ -19,7 +19,6 @@ Each utility directory is a [GNU Stow](https://www.gnu.org/software/stow/) packa
 | `pi`       | [Pi](https://pi.dev)                                        | AI coding agent settings and default model                                                     |
 | `posting`  | [Posting](https://posting.sh)                                 | Terminal HTTP client, with Tokyo Night theme                                                    |
 | `tealdeer` | [tealdeer](https://github.com/tealdeer-rs/tealdeer)           | Cached tldr command examples with Tokyo Night colors                                            |
-| `tmux`     | [tmux](https://github.com/tmux/tmux)                          | Terminal multiplexer with TPM, session persistence, a sessionizer script, and AI key macros     |
 | `wallpapers` | Omarchy backgrounds                                          | Tokyo Night wallpaper set from [Omarchy](https://github.com/omacom/omarchy), stowed to `~/Pictures/Wallpapers` |
 | `yazi`     | [Yazi](https://yazi-rs.github.io)                             | Terminal file manager with the sshfs plugin                                                     |
 | `zsh`      | [Zsh](https://www.zsh.org)                                    | Shell with Powerlevel10k, fzf, fzf-tab, autosuggestions, syntax highlighting, zoxide, fnm       |
@@ -37,7 +36,6 @@ the repository's configuration; it is not a Linux or Windows runtime test.
 | `zsh` | Zsh and most shell dependencies are available on macOS and Linux, but **this config assumes Apple Silicon Homebrew**: `/opt/homebrew/bin/brew` and plugin paths under `$HOMEBREW_PREFIX`. It also hardcodes `/Users/z/.local/bin` and sources `~/.local/bin/env`. Adapt these paths and install the dependencies before reuse, including on Intel Macs. |
 | `ghostty` | Ghostty runs on macOS and Linux, but this config includes `macos-titlebar-style`, `macos-option-as-alt`, and a global `cmd+grave_accent` quick-terminal binding. Review platform-specific settings and shortcut support before using it on Linux. |
 | `lazygit` | Cross-platform tool, **macOS-specific Stow layout**: `~/Library/Application Support/lazygit/config.yml`. On Linux, place the config under its Linux config directory (normally `~/.config/lazygit/config.yml`). Requires `delta` for the configured diff renderer. |
-| `tmux` | Available on macOS and Linux; not a native Windows setup (use a Unix environment such as WSL). Uses Bash, Git/TPM, zoxide, fzf, Lazygit, and Pi. Clipboard integration needs the appropriate OS backend. The hidden clock is a macOS menu-bar preference, not a runtime dependency. Use a recent tmux compatible with the configured options. |
 | `yazi` | Cross-platform tool, but configured helpers include Unix shell commands, `chmod`, `diff`, and SSHFS. SSHFS requires an OS-appropriate installation (including a FUSE implementation where needed); custom openers also require `tw` (tabiew). Not an unchanged native Windows configuration. |
 | `atuin`, `bat`, `eza`, `git`, `pi`, `posting`, `tealdeer` | No hardcoded macOS executable or config path found in these packages. They are candidates for reuse on Linux with their dependencies installed. Shared Git settings require delta and its Tokyo Night syntax theme. Pi still needs local authentication and access to the configured model. Tool availability on Windows does not make this Unix-style Stow layout a tested Windows setup. |
 | `wallpapers` | Image files and the `~/Pictures/Wallpapers` destination are reusable. The System Settings / `osascript` instructions below are **macOS-only**; use your desktop environment's wallpaper setter elsewhere. |
@@ -60,12 +58,11 @@ Clone the repository and symlink the packages you want:
 ```sh
 git clone <repo-url> ~/.dotfiles
 cd ~/.dotfiles
-stow zsh tmux ghostty    # or any other package names
+stow zsh ghostty    # or any other package names
 ```
 
 ### Notes
 
-- **tmux**: TPM and its plugins install automatically on first start.
 - **yazi**: run `ya pkg install` to install plugins from `package.toml`.
 - **borders**: install with `brew tap felixkratz/formulae && brew install borders`. AeroSpace starts it via `after-startup-command`.
 - **wallpapers**: set one from System Settings > Wallpaper, or `osascript -e 'tell application "System Events" to tell every desktop to set picture to "$HOME/Pictures/Wallpapers/omarchy-tokyo-night/0-winding-road.webp"'`.
@@ -132,7 +129,3 @@ Credentials (`auth.json`), sessions, model caches, and installation files
 remain local; they are not part of this package.
 Pi may write runtime fields such as `deviceId` and `lastChangelogVersion` into
 its settings file. Review changes before committing and omit those fields.
-
-## To-do
-
-- [ ] Replace tmux with Superlogical's terminal multiplexer once it is released. Its beta is not out yet; Superlogical's terminal, Rex, started public testing on 5 October 2026. See [the announcement](https://www.superlogical.com/updates/public-testing-beginning) and join the waitlist there to get notified.
