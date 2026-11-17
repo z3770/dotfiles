@@ -35,7 +35,7 @@ from portability of this repository's configuration. See README.md's platform
 support table for user-facing details; keep it in sync with platform changes.
 
 - **macOS-only tools:** `aerospace` (AeroSpace) and `borders` (JankyBorders).
-  AeroSpace uses `open -na Ghostty` and starts Borders through the Apple Silicon
+  AeroSpace opens Rex by bundle ID and starts Borders through the Apple Silicon
   Homebrew path `/opt/homebrew/bin/borders`.
 - **Zsh is currently Apple Silicon Homebrew-specific:** `.zshrc` invokes
   `/opt/homebrew/bin/brew`, sources plugins under `$HOMEBREW_PREFIX`, hardcodes

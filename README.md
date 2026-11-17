@@ -89,7 +89,7 @@ session after editing the config.
 
 `Alt+Shift+Enter` queues a follow-up message after Pi finishes its current task,
 replacing Pi's default `Alt+Enter` so AeroSpace can keep that shortcut for opening
-Ghostty. The override lives in `pi/.pi/agent/keybindings.json`. Run `/reload` to
+Rex. The override lives in `pi/.pi/agent/keybindings.json`. Run `/reload` to
 apply it and `/hotkeys` to inspect the active bindings. The terminal must forward
 the modifiers distinctly.
 

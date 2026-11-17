@@ -78,7 +78,7 @@ on-mode-changed = []
     alt-cmd-k = 'join-with up'
     alt-cmd-l = 'join-with right'
     alt-f = 'fullscreen'
-    alt-enter = 'exec-and-forget open -na Ghostty'
+    alt-enter = 'exec-and-forget open -b com.superlogical.rex'
 
 
 [[on-window-detected]]
