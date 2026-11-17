@@ -2,5 +2,8 @@
   "$schema": "https://pi.dev/schemas/settings.schema.json",
   "defaultProvider": "openai",
   "defaultModel": "gpt-6.1-sol",
-  "theme": "tokyonight-night"
+  "defaultThinkingLevel": "high",
+  "theme": "tokyonight-night",
+  "quietStartup": "header",
+  "enableInstallTelemetry": false
 }
