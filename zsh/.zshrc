@@ -43,10 +43,10 @@ else
 fi
 unset _zcompdump
 
-# Catppuccin Mocha colors for files and dirs in completion lists (zsh and
+# Tokyonight night colors for files and dirs in completion lists (zsh and
 # carapace). Only these four keys, copied from the eza theme: eza lets
 # LS_COLORS override theme.yml, and these values leave its output unchanged.
-export LS_COLORS="di=1;38;2;137;180;250:ln=38;2;148;226;213:ex=1;38;2;166;227;161:fi=38;2;205;214;244"
+export LS_COLORS="di=1;38;2;122;162;247:ln=38;2;42;195;222:ex=1;38;2;158;206;106:fi=38;2;192;202;245"
 
 # Show full option/argument descriptions in completions, grouped by type
 zstyle ':completion:*' verbose yes
@@ -66,17 +66,17 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 export CARAPACE_BRIDGES='zsh,bash'
 _cached_init carapace carapace _carapace zsh && source "$REPLY"
 
-# Catppuccin Mocha colors for fzf (also used by fzf-tab)
-export FZF_DEFAULT_OPTS="--color=bg+:#45475a,bg:-1,border:#74c7ec,fg:#cdd6f4,gutter:-1 \
-  --color=header:#fab387,hl+:#94e2d5,hl:#94e2d5,info:#6c7086,marker:#f5c2e7 \
-  --color=pointer:#f5c2e7,prompt:#94e2d5,query:#cdd6f4:regular,scrollbar:#74c7ec \
-  --color=separator:#fab387,spinner:#f5c2e7,fg+:#cdd6f4,label:#cdd6f4"
+# Tokyonight night colors for fzf (also used by fzf-tab)
+export FZF_DEFAULT_OPTS="--color=bg+:#283457,bg:-1,border:#27a1b9,fg:#c0caf5,gutter:-1 \
+  --color=header:#ff9e64,hl+:#2ac3de,hl:#2ac3de,info:#545c7e,marker:#ff007c \
+  --color=pointer:#ff007c,prompt:#2ac3de,query:#c0caf5:regular,scrollbar:#27a1b9 \
+  --color=separator:#ff9e64,spinner:#ff007c,fg+:#c0caf5,label:#c0caf5"
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
-# Catppuccin Mocha colors for completion groups (fzf-tab defaults to basic ANSI)
+# Tokyonight night colors for completion groups (fzf-tab defaults to basic ANSI)
 zstyle ':fzf-tab:*' group-colors \
-  $'\e[38;2;137;180;250m' $'\e[38;2;166;227;161m' $'\e[38;2;249;226;175m' \
-  $'\e[38;2;203;166;247m' $'\e[38;2;137;220;235m' $'\e[38;2;250;179;135m' \
-  $'\e[38;2;243;139;168m' $'\e[38;2;148;226;213m'  $'\e[38;2;180;190;254m'
+  $'\e[38;2;122;162;247m' $'\e[38;2;158;206;106m' $'\e[38;2;224;175;104m' \
+  $'\e[38;2;187;154;247m' $'\e[38;2;125;207;255m' $'\e[38;2;255;158;100m' \
+  $'\e[38;2;247;118;142m' $'\e[38;2;42;195;222m'  $'\e[38;2;157;124;216m'
 # Filter by the common prefix of the matches, not the raw typed word. Carapace
 # displays ~/foo/ as foo/, so the typed ~/ would otherwise hide every match.
 zstyle ':fzf-tab:*' query-string prefix first
@@ -114,8 +114,8 @@ export _ZO_FZF_OPTS="--bind=ctrl-z:ignore,btab:up,tab:down --cycle --keep-right 
 # Node version manager, auto-switches versions from .nvmrc/.node-version on cd
 eval "$(fnm env --use-on-cd)"
 
-# Catppuccin Mocha colors for autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6c7086'
+# Tokyonight night colors for autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#565f89'
 # Suggest from history first, then from completions, like fish. atuin init
 # below puts its own history search in front of these.
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
@@ -123,42 +123,42 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-# Catppuccin Mocha colors for syntax highlighting
+# Tokyonight night colors for syntax highlighting
 typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[default]='fg=#cdd6f4'
-ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#f38ba8'
-ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=#cba6f7'
-ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=#89b4fa,underline'
-ZSH_HIGHLIGHT_STYLES[global-alias]='fg=#89dceb'
-ZSH_HIGHLIGHT_STYLES[precommand]='fg=#b4befe,underline'
-ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=#89dceb'
-ZSH_HIGHLIGHT_STYLES[autodirectory]='fg=#89dceb,underline'
-ZSH_HIGHLIGHT_STYLES[path]='fg=#89dceb'
-ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=#89dceb'
-ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]='fg=#89dceb'
-ZSH_HIGHLIGHT_STYLES[globbing]='fg=#fab387'
-ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=#cba6f7'
-ZSH_HIGHLIGHT_STYLES[command-substitution]='fg=#cdd6f4'
-ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]='fg=#6c7086'
-ZSH_HIGHLIGHT_STYLES[process-substitution]='fg=#cdd6f4'
-ZSH_HIGHLIGHT_STYLES[process-substitution-delimiter]='fg=#6c7086'
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=#f9e2af'
-ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=#f9e2af'
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=#cdd6f4'
-ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]='fg=#6c7086'
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#a6e3a1'
-ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#a6e3a1'
-ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=#a6e3a1'
-ZSH_HIGHLIGHT_STYLES[rc-quote]='fg=#f9e2af'
-ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]='fg=#fab387'
-ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]='fg=#fab387'
-ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]='fg=#fab387'
-ZSH_HIGHLIGHT_STYLES[assign]='fg=#cdd6f4'
-ZSH_HIGHLIGHT_STYLES[redirection]='fg=#89dceb'
-ZSH_HIGHLIGHT_STYLES[comment]='fg=#6c7086'
-ZSH_HIGHLIGHT_STYLES[named-fd]='fg=#cdd6f4'
-ZSH_HIGHLIGHT_STYLES[numeric-fd]='fg=#cdd6f4'
-ZSH_HIGHLIGHT_STYLES[arg0]='fg=#89b4fa'
+ZSH_HIGHLIGHT_STYLES[default]='fg=#c0caf5'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#f7768e'
+ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=#bb9af7'
+ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=#7aa2f7,underline'
+ZSH_HIGHLIGHT_STYLES[global-alias]='fg=#7dcfff'
+ZSH_HIGHLIGHT_STYLES[precommand]='fg=#9d7cd8,underline'
+ZSH_HIGHLIGHT_STYLES[commandseparator]='fg=#89ddff'
+ZSH_HIGHLIGHT_STYLES[autodirectory]='fg=#7dcfff,underline'
+ZSH_HIGHLIGHT_STYLES[path]='fg=#7dcfff'
+ZSH_HIGHLIGHT_STYLES[path_pathseparator]='fg=#89ddff'
+ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]='fg=#89ddff'
+ZSH_HIGHLIGHT_STYLES[globbing]='fg=#ff9e64'
+ZSH_HIGHLIGHT_STYLES[history-expansion]='fg=#bb9af7'
+ZSH_HIGHLIGHT_STYLES[command-substitution]='fg=#c0caf5'
+ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]='fg=#565f89'
+ZSH_HIGHLIGHT_STYLES[process-substitution]='fg=#c0caf5'
+ZSH_HIGHLIGHT_STYLES[process-substitution-delimiter]='fg=#565f89'
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=#e0af68'
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=#e0af68'
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=#c0caf5'
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]='fg=#565f89'
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#9ece6a'
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#9ece6a'
+ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=#9ece6a'
+ZSH_HIGHLIGHT_STYLES[rc-quote]='fg=#e0af68'
+ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]='fg=#ff9e64'
+ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]='fg=#ff9e64'
+ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]='fg=#ff9e64'
+ZSH_HIGHLIGHT_STYLES[assign]='fg=#c0caf5'
+ZSH_HIGHLIGHT_STYLES[redirection]='fg=#89ddff'
+ZSH_HIGHLIGHT_STYLES[comment]='fg=#565f89'
+ZSH_HIGHLIGHT_STYLES[named-fd]='fg=#c0caf5'
+ZSH_HIGHLIGHT_STYLES[numeric-fd]='fg=#c0caf5'
+ZSH_HIGHLIGHT_STYLES[arg0]='fg=#7aa2f7'
 
 setopt autocd
 autoload zmv

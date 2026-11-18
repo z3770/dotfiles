@@ -1,6 +1,6 @@
 # dotfiles
 
-Personal macOS dotfiles, themed with the [Catppuccin](https://catppuccin.com) **Mocha** palette.
+Personal macOS dotfiles, themed with the [Tokyo Night](https://github.com/folke/tokyonight.nvim) **night** palette.
 
 Each utility directory is a [GNU Stow](https://www.gnu.org/software/stow/) package that mirrors the layout of `$HOME`. Repository metadata such as `.atuin/` is not a Stow package.
 
@@ -9,16 +9,15 @@ Each utility directory is a [GNU Stow](https://www.gnu.org/software/stow/) packa
 | Package    | Tool                                                          | Description                                                                                     |
 | ---------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | `aerospace` | [AeroSpace](https://github.com/nikitabobko/AeroSpace)        | Tiling window manager for macOS                                                                 |
-| `atuin`    | [Atuin](https://atuin.sh)                                     | Shell history search and sync, with Catppuccin Mocha theme                                           |
-| `bat`      | [bat](https://github.com/sharkdp/bat)                         | `cat` replacement with syntax highlighting, with Catppuccin Mocha theme                              |
-| `borders`  | [JankyBorders](https://github.com/FelixKratz/JankyBorders)    | Active-window border for AeroSpace, with a Catppuccin Mocha gradient                                  |
+| `atuin`    | [Atuin](https://atuin.sh)                                     | Shell history search and sync, with Tokyo Night theme                                           |
+| `bat`      | [bat](https://github.com/sharkdp/bat)                         | `cat` replacement with syntax highlighting, with Tokyo Night theme                              |
+| `borders`  | [JankyBorders](https://github.com/FelixKratz/JankyBorders)    | Active-window border for AeroSpace, with a Tokyo Night gradient                                  |
 | `eza`      | [eza](https://github.com/eza-community/eza)                   | `ls` replacement with icons and git status, with custom theme                                   |
-| `ghostty`  | [Ghostty](https://ghostty.org)                                | Terminal emulator: Catppuccin Mocha theme, hidden titlebar, global quick terminal (`cmd+\``)    |
-| `git`      | [Git](https://git-scm.com) + [delta](https://github.com/dandavison/delta) | Shared Git settings and Catppuccin Mocha diffs                                              |
+| `ghostty`  | [Ghostty](https://ghostty.org)                                | Terminal emulator: Tokyo Night theme, hidden titlebar, global quick terminal (`cmd+\``)    |
+| `git`      | [Git](https://git-scm.com) + [delta](https://github.com/dandavison/delta) | Shared Git settings and Tokyo Night diffs                                              |
 | `lazygit`  | [lazygit](https://github.com/jesseduffield/lazygit)           | Terminal UI for git                                                                             |
 | `pi`       | [Pi](https://pi.dev)                                        | AI coding agent settings and default model                                                     |
 | `rex`      | [Rex](https://www.superlogical.com/rex)                     | Terminal multiplexer configuration scaffold                                                    |
-| `posting`  | [Posting](https://posting.sh)                                 | Terminal HTTP client, with Catppuccin Mocha theme                                                    |
 | `wallpapers` | Omarchy backgrounds                                          | Tokyo Night wallpaper set from [Omarchy](https://github.com/omacom/omarchy), stowed to `~/Pictures/Wallpapers` |
 | `yazi`     | [Yazi](https://yazi-rs.github.io)                             | Terminal file manager with the sshfs plugin                                                     |
 | `zsh`      | [Zsh](https://www.zsh.org)                                    | Shell with Powerlevel10k, fzf, fzf-tab, autosuggestions, syntax highlighting, zoxide, fnm       |
@@ -37,7 +36,7 @@ the repository's configuration; it is not a Linux or Windows runtime test.
 | `ghostty` | Ghostty runs on macOS and Linux, but this config includes `macos-titlebar-style`, `macos-option-as-alt`, and a global `cmd+grave_accent` quick-terminal binding. Review platform-specific settings and shortcut support before using it on Linux. |
 | `lazygit` | Cross-platform tool, **macOS-specific Stow layout**: `~/Library/Application Support/lazygit/config.yml`. On Linux, place the config under its Linux config directory (normally `~/.config/lazygit/config.yml`). Requires `delta` for the configured diff renderer. |
 | `yazi` | Cross-platform tool, but configured helpers include Unix shell commands, `chmod`, `diff`, and SSHFS. SSHFS requires an OS-appropriate installation (including a FUSE implementation where needed); custom openers also require `tw` (tabiew). Not an unchanged native Windows configuration. |
-| `atuin`, `bat`, `eza`, `git`, `pi`, `posting` | No hardcoded macOS executable or config path found in these packages. They are candidates for reuse on Linux with their dependencies installed. Shared Git settings require delta and its Catppuccin Mocha syntax theme. Pi still needs local authentication and access to the configured model. Tool availability on Windows does not make this Unix-style Stow layout a tested Windows setup. |
+| `atuin`, `bat`, `eza`, `git`, `pi` | No hardcoded macOS executable or config path found in these packages. They are candidates for reuse on Linux with their dependencies installed. Shared Git settings require delta and its Tokyo Night syntax theme. Pi still needs local authentication and access to the configured model. Tool availability on Windows does not make this Unix-style Stow layout a tested Windows setup. |
 | `wallpapers` | Image files and the `~/Pictures/Wallpapers` destination are reusable. The System Settings / `osascript` instructions below are **macOS-only**; use your desktop environment's wallpaper setter elsewhere. |
 
 For Linux, select packages individually, skip `aerospace` and `borders`, and
@@ -63,14 +62,14 @@ stow zsh ghostty    # or any other package names
 
 ### Theme
 
-Active tool themes use Catppuccin Mocha, the darkest Catppuccin variant. This
+Active tool themes use Tokyo Night, the "night" variant. This
 covers Ghostty, Pi, Zsh/Powerlevel10k, fzf and completions, Atuin, bat, delta,
-Lazygit, eza, Posting, Yazi, and Borders. The Neovim configuration is
+Lazygit, eza, Yazi, and Borders. The Neovim configuration is
 excluded from this palette change. Existing wallpaper assets retain their
 original colors and names; they are not recolored or selected automatically.
 
-The previous Tokyo Night theme files remain available but are not selected.
-The bat theme is vendored from
+Catppuccin Mocha assets remain available but are not selected. The retained
+Mocha bat theme comes from
 [catppuccin/bat](https://github.com/catppuccin/bat/tree/6810349b28055dce54076712fc05fc68da4b8ec0)
 (revision `6810349b28055dce54076712fc05fc68da4b8ec0`), with its MIT license.
 After adding themes, run `bat cache --build` so bat and delta discover them.
@@ -107,7 +106,7 @@ stow pi
 
 Stows `pi/.pi/agent/settings.json` to `~/.pi/agent/settings.json`, with
 `openai/gpt-6.1-sol` as the default model. The package also stows
-`~/.pi/agent/themes/catppuccin-mocha.json` and selects the Catppuccin Mocha
+`~/.pi/agent/themes/tokyonight-night.json` and selects Tokyo Night "night"
 color scheme for Pi's interface, syntax highlighting, diffs, and HTML exports.
 Install Pi separately using the
 [official instructions](https://pi.dev), then run `/login` to authenticate.

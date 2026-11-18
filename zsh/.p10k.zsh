@@ -1,4 +1,4 @@
-# Powerlevel10k, lean style in Catppuccin Mocha colors. Only settings that differ from the
+# Powerlevel10k, lean style in tokyonight night colors. Only settings that differ from the
 # defaults are here; see /opt/homebrew/share/powerlevel10k/config/p10k-lean.zsh for the rest.
 
 'builtin' 'local' '-a' 'p10k_config_opts'
@@ -12,9 +12,9 @@
   unset -m '(POWERLEVEL9K_*|DEFAULT_USER)~POWERLEVEL9K_GITSTATUS_DIR'
   [[ $ZSH_VERSION == (5.<1->*|<6->.*) ]] || return
 
-  # Catppuccin Mocha
-  local blue='#89b4fa' cyan='#89dceb' purple='#cba6f7' red='#f38ba8'
-  local yellow='#f9e2af' green='#a6e3a1' comment='#6c7086'
+  # Tokyonight night
+  local blue='#7aa2f7' cyan='#7dcfff' purple='#bb9af7' red='#f7768e'
+  local yellow='#e0af68' green='#9ece6a' comment='#565f89'
 
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs newline prompt_char)
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs)
@@ -67,9 +67,9 @@
     # Colors are literal here: this runs at render time, after the config's locals are gone
     local branch_color changes_color
     if (( $1 )); then
-      branch_color='%F{#cba6f7}' changes_color='%F{#f38ba8}'
+      branch_color='%F{#bb9af7}' changes_color='%F{#f7768e}'
     else
-      branch_color='%F{#6c7086}' changes_color='%F{#6c7086}'
+      branch_color='%F{#565f89}' changes_color='%F{#565f89}'
     fi
 
     local res

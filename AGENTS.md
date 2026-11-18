@@ -1,7 +1,7 @@
 # Dotfiles
 
 Personal macOS-first dotfiles managed with GNU Stow and themed with the
-Catppuccin Mocha palette. These instructions apply to this repository, not to Pi
+Tokyo Night "night" palette. These instructions apply to this repository, not to Pi
 globally. This file stays at the repository root; do not stow it into
 `~/.pi/agent/AGENTS.md`.
 
@@ -14,7 +14,7 @@ globally. This file stays at the repository root; do not stow it into
 - Keep credentials, sessions, caches, installed plugins, and runtime state out
   of Git. Review Pi settings changes for generated fields before committing.
 - Inspect the working tree first and preserve unrelated changes.
-- Follow existing configuration style and use Catppuccin Mocha colors for
+- Follow existing configuration style and use Tokyo Night "night" colors for
   themes. Keep changes focused; do not commit or push unless requested.
 
 ## Autonomy and applying changes
@@ -51,9 +51,8 @@ support table for user-facing details; keep it in sync with platform changes.
   SSHFS/FUSE support. Custom data-file openers require tabiew (`tw`).
 - **Wallpapers are portable assets**; System Settings and `osascript` wallpaper
   instructions are macOS-only.
-- **Other packages** (`atuin`, `bat`, `eza`, `git`, `pi`,
-  `posting`) have no identified hardcoded macOS executable/config
-  path. Do not equate this with tested Linux or native Windows support.
+- **Other packages** (`atuin`, `bat`, `eza`, `git`, `pi`) have no identified
+  hardcoded macOS executable/config path. Do not equate this with tested Linux or native Windows support.
   Dependencies, authentication, model access, fonts, and terminal capabilities
   still need to be available. Git/Lazygit use delta.
 
