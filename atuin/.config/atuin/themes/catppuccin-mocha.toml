@@ -1,0 +1,19 @@
+[theme]
+name = "catppuccin-mocha"
+
+[colors]
+Base = "#cdd6f4"
+Title = "#cba6f7"
+Muted = "#6c7086"
+Annotation = "#7f849c"
+Guidance = "#a6e3a1"
+Important = "#fab387"
+AlertInfo = "#89b4fa"
+AlertWarn = "#f9e2af"
+AlertError = "#f38ba8"
+SyntaxCommand = "#89b4fa"
+SyntaxFlag = "#f9e2af"
+SyntaxString = "#a6e3a1"
+SyntaxVariable = "#cba6f7"
+SyntaxOperator = "#89dceb"
+SyntaxComment = "#6c7086"

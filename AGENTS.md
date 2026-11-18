@@ -1,7 +1,7 @@
 # Dotfiles
 
-Personal macOS-first dotfiles managed with GNU Stow and themed with the Tokyo
-Night "night" palette. These instructions apply to this repository, not to Pi
+Personal macOS-first dotfiles managed with GNU Stow and themed with the
+Catppuccin Mocha palette. These instructions apply to this repository, not to Pi
 globally. This file stays at the repository root; do not stow it into
 `~/.pi/agent/AGENTS.md`.
 
@@ -14,7 +14,7 @@ globally. This file stays at the repository root; do not stow it into
 - Keep credentials, sessions, caches, installed plugins, and runtime state out
   of Git. Review Pi settings changes for generated fields before committing.
 - Inspect the working tree first and preserve unrelated changes.
-- Follow existing configuration style and use Tokyo Night "night" colors for
+- Follow existing configuration style and use Catppuccin Mocha colors for
   themes. Keep changes focused; do not commit or push unless requested.
 
 ## Autonomy and applying changes

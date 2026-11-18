@@ -1,5 +1,5 @@
-theme = "TokyoNight Night"
-background = #16161e
+theme = "Catppuccin Mocha"
+background = #1e1e2e
 
 font-size = 16
 mouse-hide-while-typing = true

@@ -1,0 +1,3 @@
+-- Rex user configuration, managed by GNU Stow from ~/.dotfiles/rex.
+-- This scaffold intentionally keeps Rex's default behavior unchanged.
+-- Add supported configuration here after checking the installed Rex version.

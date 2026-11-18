@@ -4,29 +4,29 @@ gui:
   scrollHeight: 1
   theme:
     activeBorderColor:
-      - "#ff9e64"
+      - "#fab387"
       - "bold"
     inactiveBorderColor:
-      - "#27a1b9"
+      - "#74c7ec"
     searchingActiveBorderColor:
-      - "#ff9e64"
+      - "#fab387"
       - "bold"
     optionsTextColor:
-      - "#7aa2f7"
+      - "#89b4fa"
     selectedLineBgColor:
-      - "#283457"
+      - "#45475a"
     cherryPickedCommitFgColor:
-      - "#7aa2f7"
+      - "#89b4fa"
     cherryPickedCommitBgColor:
-      - "#bb9af7"
+      - "#cba6f7"
     markedBaseCommitFgColor:
-      - "#7aa2f7"
+      - "#89b4fa"
     markedBaseCommitBgColor:
-      - "#e0af68"
+      - "#f9e2af"
     unstagedChangesColor:
-      - "#db4b4b"
+      - "#f38ba8"
     defaultFgColor:
-      - "#c0caf5"
+      - "#cdd6f4"
 
 git:
   # Render diffs with delta (styled by ~/.config/git/config); side-by-side is

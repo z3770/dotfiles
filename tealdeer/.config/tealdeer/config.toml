@@ -3,20 +3,20 @@
 auto_update = true
 auto_update_interval_hours = 168
 
-# Tokyonight night colors
+# Catppuccin Mocha colors
 [style.description]
-foreground = { rgb = { r = 192, g = 202, b = 245 } }
+foreground = { rgb = { r = 205, g = 214, b = 244 } }
 
 [style.command_name]
-foreground = { rgb = { r = 122, g = 162, b = 247 } }
+foreground = { rgb = { r = 137, g = 180, b = 250 } }
 bold = true
 
 [style.example_text]
-foreground = { rgb = { r = 158, g = 206, b = 106 } }
+foreground = { rgb = { r = 166, g = 227, b = 161 } }
 
 [style.example_code]
-foreground = { rgb = { r = 125, g = 207, b = 255 } }
+foreground = { rgb = { r = 137, g = 220, b = 235 } }
 
 [style.example_variable]
-foreground = { rgb = { r = 224, g = 175, b = 104 } }
+foreground = { rgb = { r = 249, g = 226, b = 175 } }
 italic = true

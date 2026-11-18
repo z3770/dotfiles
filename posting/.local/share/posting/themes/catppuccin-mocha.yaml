@@ -1,0 +1,24 @@
+name: catppuccin-mocha
+primary: "#89b4fa"
+secondary: "#cba6f7"
+accent: "#89dceb"
+background: "#1e1e2e"
+surface: "#181825"
+panel: "#313244"
+error: "#f38ba8"
+success: "#a6e3a1"
+warning: "#f9e2af"
+dark: true
+
+url:
+  base: "#cdd6f4"
+  protocol: "bold #89dceb"
+
+method:
+  get: "#89b4fa"
+  post: "#a6e3a1"
+  put: "#f9e2af"
+  delete: "#f38ba8"
+  patch: "#cba6f7"
+  options: "#6c7086"
+  head: "#89dceb"

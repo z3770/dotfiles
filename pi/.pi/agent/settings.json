@@ -3,7 +3,11 @@
   "defaultProvider": "openai",
   "defaultModel": "gpt-6.1-sol",
   "defaultThinkingLevel": "high",
-  "theme": "tokyonight-night",
+  "theme": "catppuccin-mocha",
   "quietStartup": "header",
-  "enableInstallTelemetry": false
+  "enableInstallTelemetry": false,
+  "packages": [
+    "git:github.com/obra/superpowers@v7.0.2",
+    "git:github.com/JuliusBrussee/caveman@v4.1.0"
+  ]
 }

@@ -11,19 +11,19 @@
 	features = side-by-side-view
 	navigate = true          # n / N jump between files in a diff
 	line-numbers = true
-	syntax-theme = tokyonight_night
-	# Tokyonight night colors for added and removed lines
-	plus-style = syntax "#20303b"
-	plus-emph-style = syntax "#2c5a66"
-	minus-style = syntax "#37222c"
-	minus-emph-style = syntax "#713137"
-	line-numbers-plus-style = "#9ece6a"
-	line-numbers-minus-style = "#f7768e"
-	line-numbers-zero-style = "#3b4261"
-	file-style = "#7aa2f7" bold
-	file-decoration-style = "#7aa2f7" ul
+	syntax-theme = Catppuccin Mocha
+	# Catppuccin Mocha colors for added and removed lines
+	plus-style = syntax "#2e363c"
+	plus-emph-style = syntax "#445548"
+	minus-style = syntax "#38313d"
+	minus-emph-style = syntax "#5a3d50"
+	line-numbers-plus-style = "#a6e3a1"
+	line-numbers-minus-style = "#f38ba8"
+	line-numbers-zero-style = "#585b70"
+	file-style = "#89b4fa" bold
+	file-decoration-style = "#89b4fa" ul
 	hunk-header-style = file line-number syntax
-	hunk-header-decoration-style = "#3b4261" box
+	hunk-header-decoration-style = "#585b70" box
 
 # Separate feature so narrow views (lazygit) can turn it off with --features=
 [delta "side-by-side-view"]
