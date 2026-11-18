@@ -58,10 +58,6 @@ class MochaThemes(unittest.TestCase):
         self.assertIn('directory: { foreground: "#89b4fa" }', eza)
         self.assertIn('symlink: { foreground: "#94e2d5" }', eza)
 
-    def test_tealdeer_rgb(self):
-        config = tomllib.loads((ROOT / "tealdeer/.config/tealdeer/config.toml").read_text())
-        self.assertEqual(config["style"]["description"]["foreground"]["rgb"], {"r": 205, "g": 214, "b": 244})
-
 
 if __name__ == "__main__":
     unittest.main()

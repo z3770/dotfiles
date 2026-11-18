@@ -52,7 +52,7 @@ support table for user-facing details; keep it in sync with platform changes.
 - **Wallpapers are portable assets**; System Settings and `osascript` wallpaper
   instructions are macOS-only.
 - **Other packages** (`atuin`, `bat`, `eza`, `git`, `pi`,
-  `posting`, `tealdeer`) have no identified hardcoded macOS executable/config
+  `posting`) have no identified hardcoded macOS executable/config
   path. Do not equate this with tested Linux or native Windows support.
   Dependencies, authentication, model access, fonts, and terminal capabilities
   still need to be available. Git/Lazygit use delta.
