@@ -12,3 +12,7 @@ pi/.pi/agent/models-store.json
 pi/.pi/agent/install/
 pi/.pi/agent/bin/
 pi/.pi/agent/settings.json.*
+# Local-only task notes and research: never add or commit
+/TODO.md
+/todo.md
+/shell-research.md

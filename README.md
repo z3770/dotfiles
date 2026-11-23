@@ -31,7 +31,7 @@ the repository's configuration; it is not a Linux or Windows runtime test.
 
 | Packages | Platform considerations |
 | --- | --- |
-| `aerospace`, `borders` | **macOS-only tools.** AeroSpace uses macOS window management and launches Rex by bundle ID; Rex windows are assigned to workspace 2. Its startup hook hardcodes `/opt/homebrew/bin/borders` (Apple Silicon Homebrew). |
+| `aerospace`, `borders` | **macOS-only tools.** AeroSpace uses macOS window management and launches Rex by bundle ID. Its startup hook hardcodes `/opt/homebrew/bin/borders` (Apple Silicon Homebrew). |
 | `zsh` | Zsh and most shell dependencies are available on macOS and Linux, but **this config assumes Apple Silicon Homebrew**: `/opt/homebrew/bin/brew` and plugin paths under `$HOMEBREW_PREFIX`. It also hardcodes `/Users/z/.local/bin` and sources `~/.local/bin/env`. Adapt these paths and install the dependencies before reuse, including on Intel Macs. |
 | `ghostty` | Ghostty runs on macOS and Linux, but this config includes `macos-titlebar-style`, `macos-option-as-alt`, and a global `cmd+grave_accent` quick-terminal binding. Review platform-specific settings and shortcut support before using it on Linux. |
 | `lazygit` | Cross-platform tool, **macOS-specific Stow layout**: `~/Library/Application Support/lazygit/config.yml`. On Linux, place the config under its Linux config directory (normally `~/.config/lazygit/config.yml`). Requires `delta` for the configured diff renderer. |
